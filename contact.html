@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Careers | Hospera</title>
-  <meta name="description" content="Explore the hospitality career paths and role preparation supported by Hospera." />
+  <title>Contact | Hospera</title>
+  <meta name="description" content="Contact Hospera admissions for course details, counselling, and brochure requests." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
@@ -38,8 +38,8 @@
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
         <a href="admissions.html">Admissions</a>
-        <a href="careers.html" class="active">Careers</a>
-        <a href="contact.html">Contact</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="active">Contact</a>
         <div class="nav-actions">
           <a href="contact.html" class="btn btn-secondary">Brochure</a>
           <a href="contact.html" class="btn btn-primary">Apply Now</a>
@@ -51,64 +51,65 @@
   <main>
     <section class="page-hero">
       <div class="container page-hero-content reveal">
-        <p class="eyebrow">Careers</p>
-        <h1>Career-oriented hospitality preparation with a professional image.</h1>
-        <p>
-          The career page positions Hospera as a structured learning step toward real hospitality environments.
-        </p>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container outcomes-grid-wrap">
-        <div class="outcomes-copy reveal">
-          <p class="eyebrow dark">Hospitality Roles</p>
-          <h2>Students are guided toward clear and realistic career pathways.</h2>
-          <p>
-            The website avoids exaggerated promises and instead communicates structured preparation for service-led roles.
-          </p>
-        </div>
-
-        <div class="outcomes-grid">
-          <div class="outcome-card reveal">Front Office Associate</div>
-          <div class="outcome-card reveal">Guest Service Executive</div>
-          <div class="outcome-card reveal">Concierge Support</div>
-          <div class="outcome-card reveal">Housekeeping Associate</div>
-          <div class="outcome-card reveal">F&amp;B Service Staff</div>
-          <div class="outcome-card reveal">Hotel Operations Assistant</div>
-        </div>
+        <p class="eyebrow">Contact</p>
+        <h1>Talk to admissions and receive complete program details.</h1>
+        <p>The contact page is intentionally clean, polished, and easy to use.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container info-grid">
-        <article class="info-card reveal">
-          <h3>Communication Skills</h3>
-          <p>Students improve guest-facing language, clarity, politeness, and hospitality interaction style.</p>
-        </article>
-        <article class="info-card reveal">
-          <h3>Presentation Standards</h3>
-          <p>Grooming, service behavior, discipline, and self-presentation remain central to the training message.</p>
-        </article>
-        <article class="info-card reveal">
-          <h3>Interview Readiness</h3>
-          <p>The site supports CV preparation, confidence building, and a more professional self-introduction approach.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container feature-banner reveal">
-        <div class="feature-copy">
-          <p class="eyebrow dark">Professional Identity</p>
-          <h2>Students should feel they are entering a serious career pathway.</h2>
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow dark">Admissions Support</p>
+          <h2>We are here to guide you.</h2>
           <p>
-            The tone stays balanced and trustworthy, which helps the website feel more mature and credible.
+            Replace the placeholder details below with your real phone number, email, and office address before publishing.
           </p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <strong>Phone / WhatsApp</strong>
+              <span>+91 99999 99999</span>
+            </div>
+            <div class="contact-card">
+              <strong>Email</strong>
+              <span>admissions@hospera.in</span>
+            </div>
+            <div class="contact-card">
+              <strong>Location</strong>
+              <span>Hyderabad, Telangana, India</span>
+            </div>
+          </div>
         </div>
-        <div class="feature-image">
-          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=80" alt="Professional hotel environment" />
-        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <h3>Request a Call Back</h3>
+
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter your full name" required />
+
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="Enter your email address" required />
+
+          <label for="interest">Interested In</label>
+          <select id="interest" name="interest" required>
+            <option value="">Select a program</option>
+            <option value="6-Month Hospitality Program">6-Month Hospitality Program</option>
+            <option value="Front Office Training">Front Office Training</option>
+            <option value="Housekeeping Training">Housekeeping Training</option>
+            <option value="F&B Service Training">F&B Service Training</option>
+            <option value="Admissions">Admissions</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals"></textarea>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Enquiry</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -127,7 +128,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
       <div>
