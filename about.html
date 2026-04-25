@@ -11,49 +11,49 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
-<style>
-.founders-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  margin-top: 48px;
-}
-.f-card {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
-  transition: border-color 0.3s;
-}
-.f-card:hover {
-  border-color: rgba(196, 150, 58, 0.45);
-}
-.f-photo {
-  position: relative;
-  overflow: hidden;
-}
-.f-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  filter: grayscale(10%);
-  transition: filter 0.4s ease, transform 0.5s ease;
-}
-.f-card:hover .f-photo img {
-  filter: grayscale(0%);
-  transform: scale(1.04);
-}
-.f-body {
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.f-name {
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  .founders-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 28px;
+   margin-top: 48px;
+ }
+ .f-card {
+   display: grid;
+   grid-template-columns: 220px 1fr;
+   overflow: hidden;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   background: rgba(255, 255, 255, 0.03);
+   transition: border-color 0.3s;
+ }
+ .f-card:hover {
+   border-color: rgba(196, 150, 58, 0.45);
+ }
+ .f-photo {
+   position: relative;
+   overflow: hidden;
+ }
+ .f-photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: top center;
+   display: block;
+   filter: grayscale(10%);
+   transition: filter 0.4s ease, transform 0.5s ease;
+ }
+ .f-card:hover .f-photo img {
+   filter: grayscale(0%);
+   transform: scale(1.04);
+ }
+ .f-body {
+   padding: 32px 28px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+ .f-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   font-weight: 700;
@@ -146,35 +146,6 @@
 }
 </style>
 </head>
-<body class="about-page">
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="index.html" aria-label="Hospera Institute home">
-        <span class="brand-mark"><img src="assets/hospera_logo_transparent.png" alt="Hospera logo" /></span>
-        <span class="brand-copy">
-          <span class="brand-title">Hospera</span>
-          <span class="brand-subtitle">Institute of Hospitality</span>
-        </span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-menu" id="navMenu">
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
-          <a href="programs.html">Programs</a>
-          <a href="careers.html">Careers</a>
-          <a href="admissions.html">Admissions</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="nav-actions">
-          <a class="btn btn-outline" href="programs.html">Explore</a>
-          <a class="btn btn-gold" href="apply.html">Apply Now</a>
-        </div>
-      </nav>
-    </div>
-  </header>
 
   <main class="main-shell">
     <section class="page-hero has-video" style="background-image: url('assets/reception.jpg');">
