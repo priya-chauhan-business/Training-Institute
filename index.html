@@ -800,213 +800,213 @@
         font-size: clamp(2.2rem, 8vw, 3.4rem);
       }
     }
-  /* ── HOTEL BRANDS TICKER ── */
-  .brands-ticker-section {
-    position: relative;
-    overflow: hidden;
-    padding: 72px 0;
-    background: linear-gradient(180deg, #06111f 0%, #0a1628 100%);
-    border-top: 1px solid rgba(196, 150, 58, 0.1);
-    border-bottom: 1px solid rgba(196, 150, 58, 0.1);
-  }
+    /* ── HOTEL BRANDS TICKER ── */
+    .brands-ticker-section {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0;
+      background: linear-gradient(180deg, #06111f 0%, #0a1628 100%);
+      border-top: 1px solid rgba(196, 150, 58, 0.1);
+      border-bottom: 1px solid rgba(196, 150, 58, 0.1);
+    }
 
-  .brands-ticker-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 50%, rgba(196, 150, 58, 0.08), transparent 40%),
-      radial-gradient(circle at 80% 50%, rgba(42, 86, 166, 0.1), transparent 40%);
-    pointer-events: none;
-  }
+    .brands-ticker-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(196, 150, 58, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 50%, rgba(42, 86, 166, 0.1), transparent 40%);
+      pointer-events: none;
+    }
 
-  .brands-header {
-    text-align: center;
-    margin-bottom: 44px;
-    position: relative;
-    z-index: 1;
-  }
+    .brands-header {
+      text-align: center;
+      margin-bottom: 44px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .brands-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    color: var(--gold-400);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-  }
+    .brands-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--gold-400);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }  
 
-  .brands-kicker::before,
-  .brands-kicker::after {
-    content: "";
-    width: 48px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold-500));
-  }
+    .brands-kicker::before,
+    .brands-kicker::after {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-500));
+    }
 
-  .brands-kicker::after {
-    background: linear-gradient(90deg, var(--gold-500), transparent);
-  }
+    .brands-kicker::after {
+      background: linear-gradient(90deg, var(--gold-500), transparent);
+    }
 
-  .brands-heading {
-    margin: 0;
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1.6rem, 2.8vw, 2.6rem);
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-  }
+    .brands-heading {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
 
-  .brands-heading span {
-    color: var(--gold-400);
-  }
+    .brands-heading span {
+      color: var(--gold-400);
+    }
 
-  .brands-subtext {
-    margin: 10px 0 0;
-    font-size: 0.86rem;
-    color: rgba(255, 255, 255, 0.44);
-    letter-spacing: 0.04em;
-  }
+    .brands-subtext {
+      margin: 10px 0 0;
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.44);
+      letter-spacing: 0.04em;
+    }
 
-  /* Fade masks on left and right edges */
-  .ticker-wrap {
-    position: relative;
-  }
+    /* Fade masks on left and right edges */
+    .ticker-wrap {
+      position: relative;
+    }
 
-  .ticker-wrap::before,
-  .ticker-wrap::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 160px;
-    z-index: 2;
-    pointer-events: none;
-  }
+    .ticker-wrap::before,
+    .ticker-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 160px;
+      z-index: 2;
+      pointer-events: none;
+    }
 
-  .ticker-wrap::before {
-    left: 0;
-    background: linear-gradient(90deg, #06111f, transparent);
-  }
+    .ticker-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, #06111f, transparent);
+    }
 
-  .ticker-wrap::after {
-    right: 0;
-    background: linear-gradient(270deg, #06111f, transparent);
-  }
+    .ticker-wrap::after {
+      right: 0;
+      background: linear-gradient(270deg, #06111f, transparent);
+    }
 
-  .ticker-row {
-    display: flex;
-    gap: 0;
-    width: max-content;
-    margin-bottom: 18px;
-  }
-
-  .ticker-row:last-child {
-    margin-bottom: 0;
-  }
-
-  .ticker-row.row-forward {
-    animation: tickerScrollLeft 38s linear infinite;
-  }
-
-  .ticker-row.row-reverse {
-    animation: tickerScrollRight 44s linear infinite;
-  }
-
-  .ticker-row:hover {
-    animation-play-state: paused;
-  }
-
-  .ticker-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    padding: 0 36px;
-    white-space: nowrap;
-    position: relative;
-  }
-
-  .ticker-item::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgba(196, 150, 58, 0.35);
-  }
-
-  .ticker-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    border: 1px solid rgba(196, 150, 58, 0.2);
-    background: rgba(255, 255, 255, 0.04);
-    flex-shrink: 0;
-    transition: background 0.3s ease, border-color 0.3s ease;
-  }
-
-  .ticker-item:hover .ticker-icon {
-    background: rgba(196, 150, 58, 0.12);
-    border-color: rgba(196, 150, 58, 0.38);
-  }
-
-  .ticker-icon svg {
-    width: 16px;
-    height: 16px;
-    color: var(--gold-400);
-    opacity: 0.8;
-  }
-
-  .ticker-name {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.28rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.72);
-    letter-spacing: 0.02em;
-    transition: color 0.25s ease;
-  }
-
-  .ticker-item:hover .ticker-name {
-    color: #fff;
-  }
-
-  .ticker-category {
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(196, 150, 58, 0.54);
-    transition: color 0.25s ease;
-  }
-
-  .ticker-item:hover .ticker-category {
-    color: var(--gold-400);
-  }
-
-  @keyframes tickerScrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  @keyframes tickerScrollRight {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
     .ticker-row {
-      animation: none !important;
-      }
+      display: flex;
+      gap: 0;
+      width: max-content;
+      margin-bottom: 18px;
+    }
+
+    .ticker-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .ticker-row.row-forward {
+      animation: tickerScrollLeft 38s linear infinite;
+    }
+
+    .ticker-row.row-reverse {
+      animation: tickerScrollRight 44s linear infinite;
+    }
+
+    .ticker-row:hover {
+      animation-play-state: paused;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 36px;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .ticker-item::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(196, 150, 58, 0.35);
+    }
+
+    .ticker-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid rgba(196, 150, 58, 0.2);
+      background: rgba(255, 255, 255, 0.04);
+      flex-shrink: 0;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .ticker-item:hover .ticker-icon {
+      background: rgba(196, 150, 58, 0.12);
+      border-color: rgba(196, 150, 58, 0.38);
+    }
+
+    .ticker-icon svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold-400);
+      opacity: 0.8;
+    }
+
+    .ticker-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.28rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.72);
+      letter-spacing: 0.02em;
+      transition: color 0.25s ease;
+    }
+
+    .ticker-item:hover .ticker-name {
+      color: #fff;
+    }
+
+    .ticker-category {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(196, 150, 58, 0.54);
+      transition: color 0.25s ease;
+    }
+
+    .ticker-item:hover .ticker-category {
+      color: var(--gold-400);
+    }
+
+    @keyframes tickerScrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes tickerScrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-row {
+        animation: none !important;
+        }
      }   
     </style>
     <script type="application/ld+json">
@@ -1247,7 +1247,171 @@
         </div>
       </div>
     </section>
+    <!-- ══ HOTEL BRANDS TICKER ══ -->
+    <section class="brands-ticker-section">
+      <div class="brands-header">
+        <div class="brands-kicker">The Standard We Train You For</div>
+        <h2 class="brands-heading">Preparing you for the world's <span>leading hotel groups</span></h2>
+        <p class="brands-subtext">Our curriculum, Opera PMS training, and Arabic readiness are built around what these brands hire for.</p>
+      </div>
 
+      <div class="ticker-wrap">
+
+        <!-- Row 1 — scrolls left -->
+        <div class="ticker-row row-forward">
+          <!-- Set 1 -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Marriott International</span>
+            <span class="ticker-category">Global · 30 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Accor Hotels</span>
+            <span class="ticker-category">France · 40+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">IHG Hotels &amp; Resorts</span>
+            <span class="ticker-category">UK · 18 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Radisson Hotel Group</span>
+            <span class="ticker-category">Global · 9 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Jumeirah Group</span>
+            <span class="ticker-category">Dubai · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Wyndham Hotels</span>
+            <span class="ticker-category">USA · 24 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hilton Hotels</span>
+            <span class="ticker-category">Global · 18 Brands</span>
+          </div>
+          <!-- Set 2 — exact duplicate for seamless loop -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Marriott International</span>
+            <span class="ticker-category">Global · 30 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Accor Hotels</span>
+            <span class="ticker-category">France · 40+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">IHG Hotels &amp; Resorts</span>
+            <span class="ticker-category">UK · 18 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Radisson Hotel Group</span>
+            <span class="ticker-category">Global · 9 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Jumeirah Group</span>
+            <span class="ticker-category">Dubai · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Wyndham Hotels</span>
+            <span class="ticker-category">USA · 24 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hilton Hotels</span>
+            <span class="ticker-category">Global · 18 Brands</span>
+          </div>
+        </div>
+
+        <!-- Row 2 — scrolls right -->
+        <div class="ticker-row row-reverse">
+          <!-- Set 1 -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Taj Hotels &amp; Resorts</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Oberoi Hotels</span>
+            <span class="ticker-category">India · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Four Seasons Hotels</span>
+            <span class="ticker-category">Canada · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hyatt Hotels</span>
+            <span class="ticker-category">USA · 20+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">The Leela Palaces</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Rotana Hotels</span>
+            <span class="ticker-category">UAE · Gulf</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Minor Hotels</span>
+            <span class="ticker-category">Thailand · Global</span>
+          </div>
+          <!-- Set 2 — exact duplicate for seamless loop -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Taj Hotels &amp; Resorts</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Oberoi Hotels</span>
+            <span class="ticker-category">India · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Four Seasons Hotels</span>
+            <span class="ticker-category">Canada · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hyatt Hotels</span>
+            <span class="ticker-category">USA · 20+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">The Leela Palaces</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Rotana Hotels</span>
+            <span class="ticker-category">UAE · Gulf</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Minor Hotels</span>
+            <span class="ticker-category">Thailand · Global</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ══ END HOTEL BRANDS TICKER ══ -->
     <section class="section section-light section-anchor" id="enroll">
       <div class="container">
         <div class="enroll-lounge" style="background-image: url('assets/hotel-room.jpg');" data-reveal>
