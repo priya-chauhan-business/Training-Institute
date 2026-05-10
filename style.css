@@ -2282,3 +2282,81 @@ body::after {
   .f-photo { aspect-ratio: 3/2; }
   .founder-quote { padding: 28px 22px; }
 }
+/* ── LIGHT BACKGROUND REFRESH ── */
+
+/* 1. Whiten the base */
+:root {
+  --ivory-100: #ffffff;
+  --ivory-200: #f4f4f4;
+}
+
+body {
+  background: #ffffff;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at top right, rgba(184, 138, 70, 0.04), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(13, 23, 36, 0.03), transparent 22%);
+}
+
+/* 2. Light sections go fully white */
+.section-light {
+  background: #ffffff;
+}
+
+/* 3. Contrast sections get a soft warm grey instead of cream */
+.section-contrast {
+  background: #f7f7f7;
+}
+
+/* 4. Feature cards pop more on white */
+.section-light .feature-card,
+.section-light .detail-card,
+.section-light .table-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06), 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+
+/* 5. Text on white sections — slightly darker for contrast */
+.section-light .section-intro,
+.section-light .serif-copy,
+.section-light .card-copy {
+  color: #5a5248;
+}
+
+.section-light .section-title,
+.section-light .card-title {
+  color: #0d1724;
+}
+
+/* 6. Header — on white pages, scrolled state uses white bg */
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Nav links go dark on white header */
+.site-header.scrolled .nav-links a {
+  color: rgba(13, 23, 36, 0.72);
+}
+
+.site-header.scrolled .nav-links a:hover,
+.site-header.scrolled .nav-links a.active {
+  color: #0d1724;
+}
+
+.site-header.scrolled .brand-title {
+  color: #0d1724;
+}
+
+.site-header.scrolled .brand-subtitle {
+  color: rgba(13, 23, 36, 0.55);
+}
+
+/* 7. Footer stays dark for grounding */
+.footer {
+  background: #0d1724;
+}
