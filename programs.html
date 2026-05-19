@@ -1176,19 +1176,27 @@
      margin: 0 24px;
      align-self: stretch;
    }
-   .mega-link {
+   .mega-link,
+   .nav-links .mega-link,
+   .nav-links a.mega-link {
      display: block;
      font-size: 13px;
-     color: #1a1a1a;
+     color: #1a1a1a !important;
      text-decoration: none;
      padding: 7px 0;
      transition: color 0.18s ease, padding-left 0.18s ease;
      font-family: "Manrope", sans-serif;
      font-weight: 500;
    }
-   .mega-link:hover {
-     color: #b8a98a;
+   .mega-link::after,
+   .nav-links a.mega-link::after {
+     display: none !important;
+   }
+   .mega-link:hover,
+   .nav-links a.mega-link:hover {
+     color: #b8a98a !important;
      padding-left: 5px;
+   }
    }
    .mega-footer {
      border-top: 1px solid #f0ebe3;
