@@ -1070,62 +1070,19 @@
   <style>
    /* FORCE FIX — OPERA PMS LIGHT SECTION TEXT VISIBILITY */
 
-   #opera .opera-module-list {
-     background: #ffffff !important;
-     border: 1px solid rgba(31, 24, 18, 0.10) !important;
-     box-shadow: 0 18px 52px rgba(17, 21, 28, 0.08) !important;
-   }
+   #opera .opera-module-list { background: #ffffff !important; border: 1px solid rgba(31,24,18,0.10) !important; box-shadow: 0 18px 52px rgba(17,21,28,0.08) !important; }
+   #opera .opera-module-item { background: #ffffff !important; border-bottom: 1px solid rgba(31,24,18,0.08) !important; }
+   #opera .opera-module-item:hover { background: #fbf7ef !important; }
+   #opera .opera-module-num { color: #b88a46 !important; background: rgba(216,177,120,0.12) !important; border-right: 1px solid rgba(31,24,18,0.08) !important; }
+   #opera .opera-module-title { color: #08111a !important; opacity: 1 !important; }
+   #opera .opera-module-desc { color: #6f675d !important; opacity: 1 !important; }
+   #opera .opera-module-text, #opera .opera-module-text span, #opera .opera-module-text p { opacity: 1 !important; }
 
-   #opera .opera-module-item {
-     background: #ffffff !important;
-     border-bottom: 1px solid rgba(31, 24, 18, 0.08) !important;
-   }
-
-   #opera .opera-module-item:hover {
-     background: #fbf7ef !important;
-   }
-
-   #opera .opera-module-num {
-     color: #b88a46 !important;
-     background: rgba(216, 177, 120, 0.12) !important;
-     border-right: 1px solid rgba(31, 24, 18, 0.08) !important;
-   }
-
-   #opera .opera-module-title {
-     color: #08111a !important;
-     opacity: 1 !important;
-   }
-
-   #opera .opera-module-desc {
-     color: #6f675d !important;
-     opacity: 1 !important;
-   }
-
-   #opera .opera-module-text,
-   #opera .opera-module-text span,
-   #opera .opera-module-text p {
-     opacity: 1 !important;
-   }
-   .nav-dropdown {
-     position: relative;
-     display: inline-flex;
-     align-items: center;
-   }
-   .nav-dropdown-toggle {
-     display: inline-flex;
-     align-items: center;
-     gap: 5px;
-     cursor: pointer;
-   }
-   .dropdown-arrow {
-     font-size: 8px;
-     opacity: 0.55;
-     transition: transform 0.25s ease;
-     display: inline-block;
-   }
-   .nav-dropdown:hover .dropdown-arrow {
-     transform: rotate(180deg);
-   }
+   /* ── PROGRAMS MEGA DROPDOWN ── */
+   .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+   .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+   .dropdown-arrow { font-size: 8px; opacity: 0.55; transition: transform 0.25s ease; display: inline-block; }
+   .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
    .mega-dropdown {
      position: fixed;
      top: 80px;
@@ -1144,95 +1101,32 @@
      backdrop-filter: none !important;
      -webkit-backdrop-filter: none !important;
    }
-   .nav-dropdown:hover .mega-dropdown {
-     opacity: 1;
-     visibility: visible;
-     pointer-events: all;
-     transform: translateX(-50%) translateY(0);
-   }
-   .mega-dropdown-inner {
-     display: flex;
-     padding: 26px 28px 18px;
-   }
-   .mega-col {
-     flex: 1;
-     display: flex;
-     flex-direction: column;
-     gap: 2px;
-   }
-   .mega-col-title {
-     font-size: 9.5px;
-     font-weight: 700;
-     letter-spacing: 0.14em;
-     text-transform: uppercase;
-     color: #b8a98a;
-     margin: 0 0 12px 0;
-     padding-bottom: 8px;
-     border-bottom: 1px solid #f0ebe3;
-   }
-   .mega-divider {
-     width: 1px;
-     background: #ede8e0;
-     margin: 0 24px;
-     align-self: stretch;
-   }
+   .nav-dropdown:hover .mega-dropdown { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(-50%) translateY(0); }
+   .mega-dropdown-inner { display: flex; padding: 26px 28px 18px; }
+   .mega-col { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+   .mega-col-title { font-size: 9.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #b8a98a; margin: 0 0 12px 0; padding-bottom: 8px; border-bottom: 1px solid #f0ebe3; }
+   .mega-divider { width: 1px; background: #ede8e0; margin: 0 24px; align-self: stretch; }
    .mega-link,
    .nav-links .mega-link,
    .nav-links a.mega-link {
-     display: block;
-     font-size: 13px;
+     display: block !important;
+     font-size: 13px !important;
      color: #1a1a1a !important;
-     text-decoration: none;
-     padding: 7px 0;
-     transition: color 0.18s ease, padding-left 0.18s ease;
-     font-family: "Manrope", sans-serif;
-     font-weight: 500;
+     text-decoration: none !important;
+     padding: 7px 0 !important;
+     transition: color 0.18s ease, padding-left 0.18s ease !important;
+     font-family: "Manrope", sans-serif !important;
+     font-weight: 500 !important;
    }
    .mega-link::after,
-   .nav-links a.mega-link::after {
-     display: none !important;
-   }
+   .nav-links a.mega-link::after { display: none !important; }
    .mega-link:hover,
-   .nav-links a.mega-link:hover {
-     color: #b8a98a !important;
-     padding-left: 5px;
-   }
-   }
-   .mega-footer {
-     border-top: 1px solid #f0ebe3;
-     padding: 12px 28px;
-     background: #faf8f5;
-     border-radius: 0 0 6px 6px;
-   }
-   .mega-upcoming {
-     display: inline-flex;
-     align-items: center;
-     gap: 8px;
-     font-size: 11px;
-     font-weight: 700;
-     letter-spacing: 0.1em;
-     text-transform: uppercase;
-     color: #2c2c2c;
-     text-decoration: none;
-     font-family: "Manrope", sans-serif;
-     transition: color 0.18s ease;
-   }
-   .mega-upcoming:hover {
-     color: #b8a98a;
-   }
-   .upcoming-dot {
-     width: 7px;
-     height: 7px;
-     border-radius: 50%;
-     background: #b8a98a;
-     display: inline-block;
-     animation: pulse-dot 2s infinite;
-     flex-shrink: 0;
-   }
-   @keyframes pulse-dot {
-     0%, 100% { opacity: 1; transform: scale(1); }
-     50%       { opacity: 0.45; transform: scale(1.35); }
-   } 
+   .nav-links a.mega-link:hover { color: #b8a98a !important; padding-left: 5px !important; }
+   .mega-footer { border-top: 1px solid #f0ebe3; padding: 12px 28px; background: #faf8f5; border-radius: 0 0 6px 6px; }
+   .mega-upcoming { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #2c2c2c; text-decoration: none; font-family: "Manrope", sans-serif; transition: color 0.18s ease; }
+   .mega-upcoming:hover { color: #b8a98a; }
+   .upcoming-dot { width: 7px; height: 7px; border-radius: 50%; background: #b8a98a; display: inline-block; animation: pulse-dot 2s infinite; flex-shrink: 0; }
+   @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(1.35); } }
 </style>
 </head>
 
