@@ -2154,28 +2154,25 @@
       }
     }
     // ── PROGRAMS DROPDOWN — CLICK BASED ──
-   const progToggle = document.querySelector('.nav-dropdown-toggle');
-   const progDrop   = document.querySelector('.mega-dropdown');
-   const progWrap   = document.querySelector('.nav-dropdown');
+    const progToggle = document.querySelector('.nav-dropdown-toggle');
+    const progDrop   = document.querySelector('.mega-dropdown');
+    const progWrap   = document.querySelector('.nav-dropdown');
 
-   if (progToggle && progDrop && progWrap) {
-     progToggle.addEventListener('click', function(e) {
-       e.preventDefault();
-       e.stopPropagation();
-       const isOpen = progDrop.classList.contains('open');
-       progDrop.classList.toggle('open', !isOpen);
-       progWrap.classList.toggle('active', !isOpen);
-     });
+    if (progToggle && progDrop && progWrap) {
 
-     // Keep open while mouse is inside the dropdown panel
-     progDrop.addEventListener('click', function(e) {
-       e.stopPropagation();
-     });
+      progToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isOpen = progDrop.classList.contains('open');
+        progDrop.classList.toggle('open', !isOpen);
+        progWrap.classList.toggle('active', !isOpen);
+      });
 
-     // Close when clicking anywhere else on the page
-     document.addEventListener('click', function() {
-       progDrop.classList.remove('open');
-       progWrap.classList.remove('active');
+      // Close when clicking anywhere OUTSIDE the dropdown wrapper
+      document.addEventListener('click', function(e) {
+        if (!progWrap.contains(e.target)) {
+          progDrop.classList.remove('open');
+          progWrap.classList.remove('active');
+      }
      });
    }
   </script>
