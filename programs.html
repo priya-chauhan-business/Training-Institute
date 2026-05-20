@@ -2153,6 +2153,31 @@
         reducedMotion.addEventListener("change", syncVideos);
       }
     }
+    // ── PROGRAMS DROPDOWN — CLICK BASED ──
+   const progToggle = document.querySelector('.nav-dropdown-toggle');
+   const progDrop   = document.querySelector('.mega-dropdown');
+   const progWrap   = document.querySelector('.nav-dropdown');
+
+   if (progToggle && progDrop && progWrap) {
+     progToggle.addEventListener('click', function(e) {
+       e.preventDefault();
+       e.stopPropagation();
+       const isOpen = progDrop.classList.contains('open');
+       progDrop.classList.toggle('open', !isOpen);
+       progWrap.classList.toggle('active', !isOpen);
+     });
+
+     // Keep open while mouse is inside the dropdown panel
+     progDrop.addEventListener('click', function(e) {
+       e.stopPropagation();
+     });
+
+     // Close when clicking anywhere else on the page
+     document.addEventListener('click', function() {
+       progDrop.classList.remove('open');
+       progWrap.classList.remove('active');
+     });
+   }
   </script>
 
 </body>
