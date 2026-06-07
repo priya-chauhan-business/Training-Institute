@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospera Institute | Institute of Hospitality</title>
+  <meta
+    name="description"
+    content="Hospera Institute is a UK-founded institute of hospitality in Hyderabad offering a six-month program with Opera PMS training, Arabic language learning, UK standards, and placement focused hotel career preparation."
+  />
+  <meta
+    name="keywords"
+    content="Hospera Institute, institute of hospitality Hyderabad, Opera PMS training, hospitality course Hyderabad, Arabic for hospitality, hotel placements"
+  />
+  <meta name="theme-color" content="#0b1628" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero .hero-shell {
+      max-width: 1160px;
+    }
+
+    .hero .stats-row {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    .hero .stat-card {
+      min-height: 206px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .hero .stat-number {
+      font-size: clamp(2rem, 2.8vw, 3rem);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .hero .stat-label {
+      margin-top: auto;
+      font-size: 0.76rem;
+      letter-spacing: 0.18em;
+    }
+
+    .hero .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero .chip {
+      width: auto;
+      min-width: max-content;
+      min-height: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+    }
+
+    @media (max-width: 1100px) {
+      .hero .hero-shell {
+        max-width: 920px;
+      }
+
+      .hero .stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .hero .stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero .chip-row {
+        gap: 10px;
+      }
+
+      .hero .chip {
+        white-space: normal;
+      }
+    }
+
+    .signature-experience .section-header {
+      max-width: 900px;
+      margin-bottom: 38px;
+    }
+
+    .signature-experience .section-title {
+      max-width: 860px;
+      margin-bottom: 18px;
+    }
+
+    .module-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .module-card {
+      position: relative;
+      min-height: 316px;
+      padding: 26px 22px 22px;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(196, 150, 58, 0.18);
+      background-color: #0f1b31;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-clip: padding-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      box-shadow: 0 18px 34px rgba(3, 8, 16, 0.24);
+      isolation: isolate;
+    }
+
+    .module-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 16% 82%, rgba(5, 10, 20, 0.92) 0%, rgba(5, 10, 20, 0.86) 22%, rgba(5, 10, 20, 0.56) 42%, rgba(5, 10, 20, 0.14) 66%, rgba(5, 10, 20, 0) 78%),
+        linear-gradient(90deg, rgba(5, 10, 20, 0.72) 0%, rgba(5, 10, 20, 0.42) 28%, rgba(5, 10, 20, 0.1) 56%, rgba(5, 10, 20, 0) 76%),
+        linear-gradient(180deg, rgba(7, 15, 28, 0.06) 0%, rgba(7, 15, 28, 0.28) 42%, rgba(7, 15, 28, 0.9) 100%);
+      z-index: 0;
+    }
+
+    .module-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1px rgba(196, 150, 58, 0.12);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .module-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .module-card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      align-self: flex-start;
+      margin-bottom: auto;
+      color: var(--gold-400);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .module-card-tag::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      border-radius: 3px;
+      background: linear-gradient(135deg, #75a8ff, #2c63d4);
+      box-shadow: 0 0 0 4px rgba(92, 136, 255, 0.12);
+    }
+
+    .module-card-title {
+      margin: 0;
+      color: #fff;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.56rem, 2vw, 2.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      max-width: 12ch;
+      text-wrap: balance;
+    }
+
+    .module-card-copy {
+      margin: 14px 0 0;
+      max-width: 40ch;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 0.94rem;
+      line-height: 1.68;
+    }
+
+    .module-card-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      color: var(--gold-400);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .module-card-meta::after {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold-500), transparent);
+    }
+
+    .timeline-journey {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(199, 154, 75, 0.14), transparent 20%),
+        radial-gradient(circle at 86% 18%, rgba(42, 86, 166, 0.16), transparent 22%),
+        linear-gradient(180deg, #06111f 0%, #0b1730 48%, #0d1a31 100%);
+    }
+
+    .timeline-journey::before {
+      content: "";
+      position: absolute;
+      inset: -18% auto auto -8%;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(199, 154, 75, 0.18), transparent 70%);
+      filter: blur(8px);
+      pointer-events: none;
+      animation: journeyDrift 10s ease-in-out infinite;
+    }
+
+    .timeline-journey::after {
+      content: "";
+      position: absolute;
+      inset: auto -8% -20% auto;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(57, 101, 184, 0.18), transparent 72%);
+      filter: blur(12px);
+      pointer-events: none;
+      animation: journeyDrift 12s ease-in-out infinite reverse;
+    }
+
+    .timeline-journey .container {
+      position: relative;
+      z-index: 1;
+      width: min(1320px, calc(100vw - 40px));
+    }
+
+    .timeline-journey .section-header {
+      max-width: 760px;
+      margin-bottom: 40px;
+    }
+
+    .timeline-journey .section-title {
+      margin-bottom: 12px;
+    }
+
+    .timeline-journey .section-intro {
+      max-width: 700px;
+      color: rgba(247, 242, 236, 0.82);
+      font-size: 1.02rem;
+      line-height: 1.76;
+    }
+
+    .journey-track {
+      position: relative;
+      padding-top: 16px;
+    }
+
+    .journey-track::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      top: 168px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        rgba(199, 154, 75, 0.1),
+        rgba(199, 154, 75, 0.62) 24%,
+        rgba(110, 157, 255, 0.44) 50%,
+        rgba(199, 154, 75, 0.62) 76%,
+        rgba(199, 154, 75, 0.1)
+      );
+      box-shadow: 0 0 18px rgba(110, 157, 255, 0.1);
+      animation: journeyPulseLine 6.5s ease-in-out infinite;
+    }
+
+    .journey-flow {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    .journey-card {
+      position: relative;
+      min-height: 258px;
+      padding: 22px 18px 18px;
+      border-radius: 26px;
+      border: 1px solid rgba(199, 154, 75, 0.12);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        linear-gradient(180deg, rgba(13, 28, 52, 0.72), rgba(10, 21, 40, 0.58));
+      backdrop-filter: blur(18px) saturate(118%);
+      box-shadow:
+        0 16px 28px rgba(2, 8, 16, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      animation: journeyFadeUp 0.8s ease both;
+    }
+
+    .journey-card:nth-child(1) { animation-delay: 0.06s; }
+    .journey-card:nth-child(2) { animation-delay: 0.12s; }
+    .journey-card:nth-child(3) { animation-delay: 0.18s; }
+    .journey-card:nth-child(4) { animation-delay: 0.24s; }
+    .journey-card:nth-child(5) { animation-delay: 0.3s; }
+    .journey-card:nth-child(6) { animation-delay: 0.36s; }
+
+    .journey-card:nth-child(odd) {
+      margin-top: 0;
+    }
+
+    .journey-card:nth-child(even) {
+      margin-top: 52px;
+    }
+
+    .journey-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(225, 199, 140, 0.92), transparent);
+      opacity: 0.72;
+    }
+
+    .journey-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 18%, rgba(255, 255, 255, 0.05) 42%, transparent 62%);
+      transform: translateX(-140%);
+      animation: journeyShimmerSweep 11s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .journey-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(225, 199, 140, 0.28);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
+        linear-gradient(180deg, rgba(15, 31, 58, 0.78), rgba(11, 23, 43, 0.66));
+    }
+
+    .journey-month {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 18px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(199, 154, 75, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      color: #e1c78c;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 10px 24px rgba(2, 8, 16, 0.16);
+      animation: journeyBadgeFloat 4.8s ease-in-out infinite;
+    }
+
+    .journey-title {
+      margin: 0 0 10px;
+      max-width: 10ch;
+      color: #f7f2ec;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.36rem;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .journey-copy {
+      margin: 0;
+      color: rgba(247, 242, 236, 0.82);
+      font-size: 0.87rem;
+      line-height: 1.68;
+    }
+
+    @keyframes journeyFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes journeyPulseLine {
+      0%, 100% {
+        opacity: 0.76;
+        transform: translateY(-50%) scaleX(1);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-50%) scaleX(1.01);
+      }
+    }
+
+    @keyframes journeyGlassPulse {
+      0%, 100% {
+        box-shadow:
+          0 18px 34px rgba(2, 8, 16, 0.28),
+          inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      }
+      50% {
+        box-shadow:
+          0 22px 40px rgba(2, 8, 16, 0.34),
+          inset 0 1px 0 rgba(255, 255, 255, 0.07);
+      }
+    }
+
+    @keyframes journeyShimmerSweep {
+      0%, 100% {
+        transform: translateX(-140%);
+        opacity: 0;
+      }
+      12% {
+        opacity: 0.32;
+      }
+      34% {
+        transform: translateX(140%);
+        opacity: 0;
+      }
+    }
+
+    @keyframes journeyBadgeFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-2px);
+      }
+    }
+
+    @keyframes journeyDrift {
+      0%, 100% {
+        transform: translate3d(0, 0, 0);
+      }
+      50% {
+        transform: translate3d(12px, -12px, 0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .module-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .module-card {
+        min-height: 286px;
+      }
+    }
+
+    @media (max-width: 1260px) {
+      .journey-track::before {
+        display: none;
+      }
+
+      .journey-flow {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .journey-card:nth-child(even) {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .timeline-journey .container {
+        width: min(100vw - 28px, 1320px);
+      }
+
+      .journey-flow {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .enroll-lounge {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-radius: 34px;
+      border: 1px solid rgba(196, 150, 58, 0.18);
+      background-size: cover;
+      background-position: center right;
+      box-shadow: 0 28px 64px rgba(4, 10, 20, 0.18);
+    }
+
+    .enroll-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.76;
+      filter: saturate(0.84) brightness(0.76);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .enroll-lounge::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(8, 17, 31, 0.96) 0%, rgba(8, 17, 31, 0.9) 36%, rgba(8, 17, 31, 0.72) 58%, rgba(8, 17, 31, 0.34) 100%);
+      z-index: 1;
+    }
+
+    .enroll-lounge::after {
+      content: "";
+      position: absolute;
+      left: -90px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196, 150, 58, 0.18), transparent 72%);
+      filter: blur(12px);
+      animation: journeyDrift 11s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .enroll-shell {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 26px;
+      padding: 40px 36px;
+    }
+
+    .enroll-top {
+      display: grid;
+      gap: 18px;
+      max-width: 620px;
+    }
+
+    .enroll-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--gold-400);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .enroll-kicker::after {
+      content: "";
+      width: 72px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold-500), transparent);
+    }
+
+    .enroll-title {
+      margin: 0;
+      max-width: 12ch;
+      color: #fff;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .enroll-title .accent {
+      color: var(--gold-400);
+    }
+
+    .enroll-alert {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      max-width: 470px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(196, 150, 58, 0.24);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04)),
+        linear-gradient(180deg, rgba(10, 21, 40, 0.68), rgba(10, 21, 40, 0.44));
+      backdrop-filter: blur(16px) saturate(124%);
+      box-shadow:
+        0 14px 24px rgba(2, 8, 16, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      color: #fff;
+      animation: journeyFadeUp 0.85s ease both;
+    }
+
+    .enroll-alert::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.14) 50%, transparent 100%);
+      transform: translateX(-140%);
+      animation: journeyShimmerSweep 7.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .enroll-alert > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .enroll-alert strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gold-400);
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    .enroll-alert span {
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .enroll-icon,
+    .pillar-icon {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .enroll-icon {
+      width: 42px;
+      height: 42px;
+      color: var(--navy-900);
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      box-shadow: 0 10px 20px rgba(196, 150, 58, 0.22);
+    }
+
+    .enroll-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 2px;
+      animation: journeyFadeUp 0.95s ease both;
+    }
+
+    .enroll-actions .btn {
+      flex: 0 1 190px;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .btn-cta-dark {
+      border-color: rgba(196, 150, 58, 0.34);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
+        rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px) saturate(128%);
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(2, 8, 16, 0.16);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn-cta-dark:hover {
+      transform: translateY(-2px);
+      border-color: rgba(225, 199, 140, 0.62);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.05)),
+        rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    .btn-cta-dark svg,
+    .btn-cta-gold svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .enroll-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(170px, 190px));
+      justify-content: start;
+      gap: 14px;
+    }
+
+    .pillar-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: auto;
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(196, 150, 58, 0.12);
+      background: linear-gradient(180deg, rgba(10, 18, 32, 0.82), rgba(9, 17, 29, 0.92));
+      overflow: hidden;
+      box-shadow:
+        0 12px 22px rgba(2, 8, 16, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+      animation: journeyFadeUp 0.8s ease both;
+    }
+
+    .pillar-card-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.18;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 14px;
+      display: block;
+      border: 1px solid rgba(196, 150, 58, 0.08);
+      background: #162438;
+    }
+
+    .pillar-card::before {
+      content: none;
+    }
+
+    .pillar-card::after {
+      content: none;
+    }
+
+    .pillar-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pillar-card:nth-child(1) {
+      animation-delay: 0.08s;
+    }
+
+    .pillar-card:nth-child(2) {
+      animation-delay: 0.16s;
+    }
+
+    .pillar-card:nth-child(3) {
+      animation-delay: 0.24s;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(225, 199, 140, 0.34);
+      box-shadow:
+        0 16px 28px rgba(2, 8, 16, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .pillar-icon {
+      width: 38px;
+      height: 38px;
+      margin-bottom: 0;
+      color: var(--navy-900);
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      box-shadow: 0 10px 20px rgba(196, 150, 58, 0.16);
+      animation: journeyBadgeFloat 4.6s ease-in-out infinite;
+    }
+
+    .pillar-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .pillar-title {
+      margin: 0;
+      max-width: none;
+      color: #fff;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.02rem;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      text-shadow: none;
+    }
+
+    .pillar-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @media (max-width: 1100px) {
+      .enroll-lounge {
+        background-position: 72% center;
+      }
+
+      .enroll-pillars {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .enroll-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-card {
+        max-width: 280px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .enroll-shell {
+        gap: 22px;
+        padding: 28px 24px;
+      }
+
+      .enroll-title {
+        max-width: none;
+        font-size: clamp(2.2rem, 8vw, 3.4rem);
+      }
+    }
+    /* ── HOTEL BRANDS TICKER ── */
+    .brands-ticker-section {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0;
+      background: linear-gradient(180deg, #06111f 0%, #0a1628 100%);
+      border-top: 1px solid rgba(196, 150, 58, 0.1);
+      border-bottom: 1px solid rgba(196, 150, 58, 0.1);
+    }
+
+    .brands-ticker-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(196, 150, 58, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 50%, rgba(42, 86, 166, 0.1), transparent 40%);
+      pointer-events: none;
+    }
+
+    .brands-header {
+      text-align: center;
+      margin-bottom: 44px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brands-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--gold-400);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }  
+
+    .brands-kicker::before,
+    .brands-kicker::after {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-500));
+    }
+
+    .brands-kicker::after {
+      background: linear-gradient(90deg, var(--gold-500), transparent);
+    }
+
+    .brands-heading {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .brands-heading span {
+      color: var(--gold-400);
+    }
+
+    .brands-subtext {
+      margin: 10px 0 0;
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.44);
+      letter-spacing: 0.04em;
+    }
+
+    /* Fade masks on left and right edges */
+    .ticker-wrap {
+      position: relative;
+    }
+
+    .ticker-wrap::before,
+    .ticker-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 160px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .ticker-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, #06111f, transparent);
+    }
+
+    .ticker-wrap::after {
+      right: 0;
+      background: linear-gradient(270deg, #06111f, transparent);
+    }
+
+    .ticker-row {
+      display: flex;
+      gap: 0;
+      width: max-content;
+      margin-bottom: 18px;
+    }
+
+    .ticker-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .ticker-row.row-forward {
+      animation: tickerScrollLeft 38s linear infinite;
+    }
+
+    .ticker-row.row-reverse {
+      animation: tickerScrollRight 44s linear infinite;
+    }
+
+    .ticker-row:hover {
+      animation-play-state: paused;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 36px;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .ticker-item::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(196, 150, 58, 0.35);
+    }
+
+    .ticker-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid rgba(196, 150, 58, 0.2);
+      background: rgba(255, 255, 255, 0.04);
+      flex-shrink: 0;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .ticker-item:hover .ticker-icon {
+      background: rgba(196, 150, 58, 0.12);
+      border-color: rgba(196, 150, 58, 0.38);
+    }
+
+    .ticker-icon svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gold-400);
+      opacity: 0.8;
+    }
+
+    .ticker-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.28rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.72);
+      letter-spacing: 0.02em;
+      transition: color 0.25s ease;
+    }
+
+    .ticker-item:hover .ticker-name {
+      color: #fff;
+    }
+
+    .ticker-category {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(196, 150, 58, 0.54);
+      transition: color 0.25s ease;
+    }
+
+    .ticker-item:hover .ticker-category {
+      color: var(--gold-400);
+    }
+
+    @keyframes tickerScrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes tickerScrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-row {
+        animation: none !important;
+        }
+     }
+
+    /* Home page refinements */
+    .hero {
+      min-height: 84svh;
+      padding: calc(var(--header-height) + 26px) 0 44px;
+    }
+
+    .hero .hero-shell {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      text-align: left;
+    }
+
+    .hero .hero-title {
+      font-size: clamp(2.9rem, 5.2vw, 4.7rem);
+    }
+
+    .hero .hero-subtitle {
+      max-width: none;
+      margin-bottom: 14px;
+      font-size: clamp(1rem, 1.12vw, 1.24rem);
+      line-height: 1.16;
+      white-space: nowrap;
+    }
+
+    .hero .hero-copy {
+      max-width: 50ch;
+      font-size: clamp(0.88rem, 0.32vw + 0.82rem, 0.94rem);
+      line-height: 1.62;
+    }
+
+    .hero .hero-actions {
+      margin-top: 22px;
+    }
+
+    .hero .stats-row {
+      gap: 0;
+      margin-top: 24px;
+      width: 100%;
+      max-width: 1320px;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(216, 177, 120, 0.26);
+      background:
+        linear-gradient(135deg, #071323 0%, #091b31 48%, #0e2440 100%);
+      box-shadow:
+        0 24px 52px rgba(3, 8, 16, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .hero .stat-card {
+      min-height: 132px;
+      padding: 18px 18px 16px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-right: 1px solid rgba(216, 177, 120, 0.18);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
+      backdrop-filter: none;
+      box-shadow: none;
+    }
+
+    .hero .stat-card:last-child {
+      border-right: 0;
+    }
+
+    .hero .stat-number {
+      margin: 0 0 12px;
+      font-size: clamp(1.45rem, 2vw, 2.05rem);
+      line-height: 1;
+      max-width: 8ch;
+      text-wrap: balance;
+    }
+
+    .hero .stat-label {
+      margin-top: 0;
+      font-size: 0.64rem;
+      letter-spacing: 0.18em;
+    }
+
+    .hero .chip-row {
+      margin-top: 16px;
+    }
+
+    .section {
+      padding: 58px 0;
+    }
+
+    .section-header {
+      max-width: 980px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    .section-header .section-kicker,
+    .enroll-kicker {
+      display: flex;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+    }
+
+    .section-kicker,
+    .brands-kicker,
+    .enroll-kicker,
+    .timeline-journey .section-title {
+      gap: 18px;
+      color: var(--gold-400);
+      font-family: "Manrope", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .section-kicker::before,
+    .section-kicker::after,
+    .brands-kicker::before,
+    .brands-kicker::after,
+    .timeline-journey .section-title::before,
+    .timeline-journey .section-title::after {
+      width: 82px;
+    }
+
+    .section-header .section-title {
+      margin-bottom: 12px;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      text-wrap: balance;
+    }
+
+    .section-header .section-intro {
+      max-width: 880px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    .spacer-md {
+      height: 14px;
+    }
+
+    .home-about .split-grid {
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 30px;
+      align-items: start;
+    }
+
+    .home-about-copy .section-kicker {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto 18px;
+      justify-content: center;
+    }
+
+    .home-about-copy .section-title {
+      font-size: clamp(1.9rem, 3.2vw, 2.85rem);
+      text-align: center;
+    }
+
+    .home-about-copy .section-intro,
+    .home-about-copy .serif-copy {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 40ch;
+      text-align: center;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .home-about .media-frame {
+      min-height: 360px;
+      aspect-ratio: 1.35 / 1;
+    }
+
+    .home-about .media-frame img {
+      object-position: center;
+    }
+
+    .feature-grid.three {
+      gap: 18px;
+    }
+
+    .home-about .feature-card {
+      padding: 24px;
+    }
+
+    .home-about .card-title {
+      font-size: 1.14rem;
+      line-height: 1.12;
+    }
+
+    .home-about .card-copy {
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    .signature-experience .section-header,
+    .signature-experience .section-title {
+      max-width: 1080px;
+    }
+
+    .module-card-grid {
+      gap: 28px;
+      align-items: start;
+    }
+
+    .module-card {
+      aspect-ratio: 1.95 / 1;
+      min-height: 0;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      padding: 18px 22px 20px;
+      display: flex;
+      flex-direction: column;
+      align-content: initial;
+      gap: 0;
+      text-align: left;
+      background-color: #050b14;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right center;
+    }
+
+    .module-card::before {
+      inset: 0;
+      width: auto;
+      background:
+        linear-gradient(90deg, rgba(2, 7, 14, 0.97) 0%, rgba(2, 7, 14, 0.93) 28%, rgba(2, 7, 14, 0.82) 46%, rgba(2, 7, 14, 0.42) 66%, rgba(2, 7, 14, 0.1) 100%),
+        linear-gradient(180deg, rgba(2, 7, 14, 0.18) 0%, rgba(2, 7, 14, 0.1) 40%, rgba(2, 7, 14, 0.82) 100%);
+      backdrop-filter: none;
+      border-right: 0;
+    }
+
+    .module-card-tag {
+      align-self: flex-start;
+      margin: 0 0 clamp(22px, 2.6vw, 34px);
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+    }
+
+    .module-card-title {
+      max-width: 8.2ch;
+      margin: 0;
+      font-size: clamp(1.46rem, 1.62vw, 1.78rem);
+      line-height: 1.02;
+    }
+
+    .module-card-copy {
+      max-width: 26ch;
+      margin: 12px 0 0;
+      font-size: 0.78rem;
+      line-height: 1.38;
+    }
+
+    .module-card-tag,
+    .module-card-title,
+    .module-card-copy {
+      width: min(50%, 320px);
+    }
+
+    .timeline-journey {
+      background: linear-gradient(180deg, #fcfeff 0%, #eef4fb 100%);
+      color: var(--text-dark);
+    }
+
+    .timeline-journey .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      white-space: nowrap;
+      font-size: 0.82rem;
+    }
+
+    .timeline-journey .section-title::before,
+    .timeline-journey .section-title::after {
+      content: "";
+      width: 84px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-500));
+    }
+
+    .timeline-journey .section-title::after {
+      background: linear-gradient(90deg, var(--gold-500), transparent);
+    }
+
+    .timeline-journey .section-intro {
+      color: var(--text-soft);
+    }
+
+    .journey-track::before {
+      background: linear-gradient(
+        90deg,
+        rgba(57, 101, 184, 0.12),
+        rgba(57, 101, 184, 0.38) 28%,
+        rgba(196, 150, 58, 0.44) 50%,
+        rgba(57, 101, 184, 0.38) 72%,
+        rgba(57, 101, 184, 0.12)
+      );
+      box-shadow: 0 0 18px rgba(57, 101, 184, 0.12);
+    }
+
+    .journey-card {
+      min-height: 196px;
+      padding: 20px 16px 16px;
+      border: 1px solid rgba(57, 101, 184, 0.14);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 248, 253, 0.96)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 250, 255, 0.94));
+      box-shadow:
+        0 16px 30px rgba(10, 30, 60, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .journey-card:hover {
+      border-color: rgba(196, 150, 58, 0.3);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(240, 246, 252, 0.98)),
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(242, 248, 255, 0.96));
+    }
+
+    .journey-card:nth-child(even) {
+      margin-top: 20px;
+    }
+
+    .journey-month {
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--gold-500);
+      border-color: rgba(196, 150, 58, 0.22);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.72),
+        0 10px 20px rgba(10, 30, 60, 0.06);
+    }
+
+    .journey-title {
+      max-width: none;
+      color: var(--text-dark);
+      font-size: 1.06rem;
+    }
+
+    .journey-copy {
+      color: var(--text-soft);
+      font-size: 0.76rem;
+      line-height: 1.48;
+    }
+
+    .brands-ticker-section {
+      padding: 48px 0;
+    }
+
+    .brands-heading {
+      font-size: clamp(1.28rem, 2.1vw, 1.86rem);
+    }
+
+    .brands-subtext {
+      font-size: 0.72rem;
+    }
+
+    .enroll-shell {
+      grid-template-columns: 1fr;
+      gap: 0;
+      align-items: center;
+      padding: 34px 36px;
+    }
+
+    .enroll-top {
+      max-width: 760px;
+      text-align: center;
+      justify-items: center;
+      margin: 0 auto;
+    }
+
+    .enroll-title {
+      max-width: none;
+      font-size: clamp(1.72rem, 2.8vw, 2.6rem);
+      text-wrap: balance;
+    }
+
+    .enroll-alert {
+      max-width: 620px;
+    }
+
+    .enroll-alert strong {
+      font-size: 0.82rem;
+    }
+
+    .enroll-alert span {
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 1100px) {
+      .hero .stats-row {
+        gap: 1px;
+        max-width: 100%;
+      }
+
+      .hero .stat-card:nth-child(2n) {
+        border-right: 0;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        min-height: auto;
+        padding-bottom: 52px;
+      }
+
+      .hero .hero-title {
+        font-size: clamp(3rem, 12vw, 4.6rem);
+      }
+
+      .hero .hero-copy,
+      .hero .hero-subtitle {
+        max-width: none;
+        white-space: normal;
+      }
+
+      .hero .stat-card {
+        min-height: 160px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .home-about .split-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .home-about .media-frame {
+        order: 1;
+        width: 100%;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        border-radius: 26px;
+      }
+
+      .home-about-copy {
+        order: 2;
+      }
+
+      .home-about-copy .section-title,
+      .home-about-copy .section-intro,
+      .home-about-copy .serif-copy {
+        max-width: none;
+      }
+
+      .module-card::before {
+        width: auto;
+      }
+
+      .module-card-grid {
+        gap: 24px;
+      }
+
+      .module-card {
+        aspect-ratio: auto;
+        min-height: 348px;
+        padding: 24px 22px;
+        justify-content: flex-start;
+      }
+
+      .module-card-tag,
+      .module-card-title,
+      .module-card-copy {
+        width: min(72%, 300px);
+      }
+
+      .module-card-tag {
+        margin-bottom: 12px;
+        font-size: 0.62rem;
+        letter-spacing: 0.16em;
+      }
+
+      .module-card-title {
+        max-width: 10ch;
+        font-size: clamp(1.42rem, 7.2vw, 2.05rem);
+        line-height: 1.03;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      .module-card-copy {
+        max-width: 24ch;
+        margin-top: 14px;
+        font-size: 0.84rem;
+        line-height: 1.42;
+      }
+
+      .module-card:nth-child(4) .module-card-title {
+        font-size: clamp(1.32rem, 6.8vw, 1.9rem);
+      }
+
+      .timeline-journey .section-title {
+        white-space: normal;
+      }
+
+      .timeline-journey .section-title::before,
+      .timeline-journey .section-title::after,
+      .section-kicker::before,
+      .section-kicker::after,
+      .brands-kicker::before,
+      .brands-kicker::after {
+        width: 46px;
+      }
+
+      .enroll-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+      }
+
+      .enroll-actions .btn {
+        width: 100%;
+        min-width: 0;
+        padding-inline: 12px;
+      }
+    }
+
+    .enroll-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(170px, 190px));
+      width: fit-content;
+    }
+
+    .enroll-actions .btn {
+      width: 100%;
+      min-width: 0;
+      justify-content: center;
+    }
+
+    @media (max-width: 560px) {
+      .enroll-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+      }
+
+      .enroll-actions .btn {
+        padding-inline: 10px;
+      }
+    }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Hospera Institute",
+      "description": "UK-founded institute of hospitality in Hyderabad with placement focused training.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressCountry": "IN"
+      },
+      "telephone": ["+91 8523072664", "+91 9032014622"],
+      "email": "info@hosperainstitute.com"
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Hospera Institute home">
+        <span class="brand-mark"><img src="assets/hospera_logo_transparent.png" alt="Hospera logo" /></span>
+        <span class="brand-copy">
+          <span class="brand-title">Hospera</span>
+          <span class="brand-subtitle">Institute of Hospitality</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="programs.html">Programs</a>
+          <a href="careers.html">Careers &amp; Admissions</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-outline" href="programs.html">Brochure</a>
+          <a class="btn btn-gold" href="apply.html">Apply Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-shell">
+    <section class="hero has-video" id="cover" style="background-image: url('assets/lobby.jpg');">
+      <video class="hero-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" poster="assets/lobby.jpg" aria-hidden="true">
+        <source src="assets/videos/index video top.mp4" type="video/mp4" />
+      </video>
+      <div class="container hero-grid"> 
+        <div class="hero-shell" data-reveal>
+          <span class="section-kicker">Institute of Hospitality</span>
+          <h1 class="hero-title">Hospera <span class="highlight">Institute</span></h1>
+          <p class="hero-subtitle">Where ambitious talent meets five-star standards</p>
+          <p class="hero-copy">
+            A UK-founded hospitality training institute in Hyderabad, India, built for students who want international hotel standards,
+            Opera PMS confidence, Arabic language readiness, and a clear path into placement focused careers.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="careers.html#admissions">Enroll for the Next Batch</a>
+            <a class="btn btn-outline" href="programs.html">View the Program</a>
+          </div>
+          <div class="stats-row">
+            <article class="stat-card">
+              <span class="stat-number">Live Hotel Simulation</span>
+              <span class="stat-label">Hotel Operations</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-number">100% Placement</span>
+              <span class="stat-label">Assistance Focus</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-number">Opera PMS</span>
+              <span class="stat-label">Software Training</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-number">₹1.20 LAKHS</span>
+              <span class="stat-label">Avg Starting Salary</span>
+            </article>
+          </div>
+          <div class="chip-row">
+            <span class="chip">6 Months Program</span>
+            <span class="chip">&#8377;Arabic Language, Gulf Essential</span>
+            <span class="chip">UK Standards</span>
+            <span class="chip">From Training to Job Ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light section-anchor home-about" id="about">
+      <div class="container">
+        <div class="split-grid">
+          <div class="content-stack home-about-copy" data-reveal>
+            <span class="section-kicker">About Hospera</span>
+            <h2 class="section-title">More Than a <span class="highlight">Course</span></h2>
+            <p class="section-intro">
+              Hospera Institute is a UK-founded hospitality training institute based in Hyderabad, India. We do not just teach hotel
+              operations. We transform ambitious individuals into industry-ready professionals.
+            </p>
+            <p class="serif-copy">
+              Our program combines global standards with placement opportunities, ensuring graduates have the skills, confidence,
+              and connections to launch successful careers in luxury hospitality.
+            </p>
+          </div>
+          <div class="media-frame" data-reveal>
+            <img src="assets/Reception_A.png" alt="Hospera hospitality reception training" />
+          </div>
+        </div>
+
+        <div class="spacer-md"></div>
+
+        <div class="feature-grid three">
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Industry Recognized</span>
+            <h3 class="card-title">UK-Designed Curriculum</h3>
+            <p class="card-copy">A premium training structure shaped around hospitality roles, software practice, service culture, and placement readiness.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Expert Faculty</span>
+            <h3 class="card-title">Trained by hotel professionals</h3>
+            <p class="card-copy">Students learn from mentors who understand luxury hotel standards, guest expectations, and real-world operational pressure.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Global Standards</span>
+            <h3 class="card-title">Built on international hotel expectations</h3>
+            <p class="card-copy">We prepare students to meet global hospitality requirements through real-world systems, communication, and service excellence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark signature-experience">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Signature Modules</span>
+          <h2 class="section-title">Four modules that shape <span class="highlight">real hotel readiness</span></h2>
+          <p class="section-intro">
+            Hospera combines systems, language, simulations, and management thinking so students develop both operational confidence and professional judgement before placements begin.
+          </p>
+        </div>
+
+        <div class="module-card-grid">
+          <article
+            class="module-card"
+            style="background-image: url('assets/Opera pms training tile.jpeg');"
+            data-reveal
+          >
+            <span class="module-card-tag">Core System</span>
+            <h3 class="module-card-title">Opera PMS Training</h3>
+            <p class="module-card-copy">
+              Master the industry-standard hotel management system used in international properties. Learn reservations, guest profiles, billing processes, and front office operations through hands-on practice.
+            </p>
+          </article>
+
+          <article
+            class="module-card"
+            style="background-image: url('assets/Arabic learning tile.jpeg');"
+            data-reveal
+          >
+            <span class="module-card-tag">Gulf Readiness</span>
+            <h3 class="module-card-title">Arabic Language</h3>
+            <p class="module-card-copy">
+              Develop practical Arabic communication skills tailored for Gulf hospitality. Learn essential phrases, guest interaction language, and workplace communication used in UAE and Middle East hotels.
+            </p>
+          </article>
+
+          <article
+            class="module-card"
+            style="background-image: url('assets/Interactive learning tile.png');"
+            data-reveal
+          >
+            <span class="module-card-tag">Live Practice</span>
+            <h3 class="module-card-title">Interactive Learning</h3>
+            <p class="module-card-copy">
+              Train through real hotel simulations, role plays, and live scenarios. Build confidence, grooming standards, and service etiquette required to perform in a professional hotel environment.
+            </p>
+          </article>
+
+          <article
+            class="module-card"
+            style="background-image: url('assets/Master inspired training image.png');"
+            data-reveal
+          >
+            <span class="module-card-tag">Advanced Insight</span>
+            <h3 class="module-card-title">Masters-Inspired Training</h3>
+            <p class="module-card-copy">
+              Gain advanced business understanding through concepts like SWOT analysis, Mendelow's Matrix, and guest psychology (colour preferences) to enhance decision-making and service excellence.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light section-anchor timeline-journey" id="timeline">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 class="section-title">Course Timeline</h2>
+          <p class="section-intro">Six months of intensive training, from foundation skills to placement preparation.</p>
+        </div>
+        <div class="journey-track">
+          <div class="journey-flow">
+            <article class="journey-card" data-reveal>
+              <div class="journey-month">Month 1</div>
+              <h3 class="journey-title">Foundation</h3>
+              <p class="journey-copy">Hotel etiquette, communication, grooming, and service behavior basics.</p>
+            </article>
+            <article class="journey-card" data-reveal>
+              <div class="journey-month">Month 2</div>
+              <h3 class="journey-title">Front Office Basics</h3>
+              <p class="journey-copy">Reservations, desk flow, guest arrival handling, and check-in confidence.</p>
+            </article>
+            <article class="journey-card" data-reveal>
+              <div class="journey-month">Month 3</div>
+              <h3 class="journey-title">Opera PMS</h3>
+              <p class="journey-copy">Billing routines, room allocation, guest profiles, and software confidence.</p>
+            </article>
+            <article class="journey-card" data-reveal>
+              <div class="journey-month">Month 4</div>
+              <h3 class="journey-title">Housekeeping</h3>
+              <p class="journey-copy">Room setup, quality inspection, presentation detail, and VIP standards.</p>
+            </article>
+            <article class="journey-card" data-reveal>
+              <div class="journey-month">Month 5</div>
+              <h3 class="journey-title">Arabic and Service</h3>
+              <p class="journey-copy">Guest phrases, Gulf hospitality language, and service refinement practice.</p>
+            </article>
+            <article class="journey-card" data-reveal>
+              <div class="journey-month">Month 6</div>
+              <h3 class="journey-title">Placement Prep</h3>
+              <p class="journey-copy">Interview practice, assessments, professional polish, and employer readiness.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ══ HOTEL BRANDS TICKER ══ -->
+    <section class="brands-ticker-section">
+      <div class="brands-header">
+        <div class="brands-kicker">The Standard We Train You For</div>
+        <h2 class="brands-heading">Preparing you for the world's <span>leading hotel groups</span></h2>
+        <p class="brands-subtext">Our curriculum, Opera PMS training, and Arabic readiness are built around what these brands hire for.</p>
+      </div>
+
+      <div class="ticker-wrap">
+
+        <!-- Row 1 — scrolls left -->
+        <div class="ticker-row row-forward">
+          <!-- Set 1 -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Marriott International</span>
+            <span class="ticker-category">Global · 30 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Accor Hotels</span>
+            <span class="ticker-category">France · 40+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">IHG Hotels &amp; Resorts</span>
+            <span class="ticker-category">UK · 18 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Radisson Hotel Group</span>
+            <span class="ticker-category">Global · 9 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Jumeirah Group</span>
+            <span class="ticker-category">Dubai · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Wyndham Hotels</span>
+            <span class="ticker-category">USA · 24 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hilton Hotels</span>
+            <span class="ticker-category">Global · 18 Brands</span>
+          </div>
+          <!-- Set 2 — exact duplicate for seamless loop -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Marriott International</span>
+            <span class="ticker-category">Global · 30 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Accor Hotels</span>
+            <span class="ticker-category">France · 40+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">IHG Hotels &amp; Resorts</span>
+            <span class="ticker-category">UK · 18 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Radisson Hotel Group</span>
+            <span class="ticker-category">Global · 9 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Jumeirah Group</span>
+            <span class="ticker-category">Dubai · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Wyndham Hotels</span>
+            <span class="ticker-category">USA · 24 Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hilton Hotels</span>
+            <span class="ticker-category">Global · 18 Brands</span>
+          </div>
+        </div>
+
+        <!-- Row 2 — scrolls right -->
+        <div class="ticker-row row-reverse">
+          <!-- Set 1 -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Taj Hotels &amp; Resorts</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Oberoi Hotels</span>
+            <span class="ticker-category">India · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Four Seasons Hotels</span>
+            <span class="ticker-category">Canada · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hyatt Hotels</span>
+            <span class="ticker-category">USA · 20+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">The Leela Palaces</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Rotana Hotels</span>
+            <span class="ticker-category">UAE · Gulf</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Minor Hotels</span>
+            <span class="ticker-category">Thailand · Global</span>
+          </div>
+          <!-- Set 2 — exact duplicate for seamless loop -->
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Taj Hotels &amp; Resorts</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Oberoi Hotels</span>
+            <span class="ticker-category">India · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Four Seasons Hotels</span>
+            <span class="ticker-category">Canada · Ultra Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Hyatt Hotels</span>
+            <span class="ticker-category">USA · 20+ Brands</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">The Leela Palaces</span>
+            <span class="ticker-category">India · Luxury</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Rotana Hotels</span>
+            <span class="ticker-category">UAE · Gulf</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/><rect x="10" y="10" width="4" height="4"/></svg></span>
+            <span class="ticker-name">Minor Hotels</span>
+            <span class="ticker-category">Thailand · Global</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ══ END HOTEL BRANDS TICKER ══ -->
+    <section class="section section-light section-anchor" id="enroll">
+      <div class="container">
+        <div class="enroll-lounge" style="background-image: url('assets/hotel-room.jpg');" data-reveal>
+          <video class="enroll-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" poster="assets/hotel-room.jpg" aria-hidden="true">
+            <source src="assets/videos/cta-ready-view.mp4" type="video/mp4" />
+          </video>
+          <div class="enroll-shell">
+            <div class="enroll-top">
+              <span class="enroll-kicker">Ready to Begin?</span>
+              <h3 class="enroll-title">Start with Hospera. Step into <span class="accent">global hotel careers.</span></h3>
+              <div class="enroll-alert">
+                <span class="enroll-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="8.5"></circle>
+                    <path d="M12 7.5v5l3 2"></path>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Limited seats for the next intake.</strong>
+                  <span>Early applications are now open.</span>
+                </div>
+              </div>
+              <div class="enroll-actions">
+                <a class="btn btn-gold btn-cta-gold" href="apply.html">Apply Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+                <a class="btn btn-cta-dark" href="contact.html">Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-2.92-.39-4.15-1.07L3 20l1.16-5.07A8.47 8.47 0 0 1 4 11.5 8.5 8.5 0 1 1 21 11.5Z"></path><path d="M9.5 10.5h5"></path><path d="M9.5 13.5h3"></path></svg></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Hospera Institute</h3>
+        <p class="footer-copy">UK-founded Institute of Hospitality in Hyderabad, India.</p>
+        <p class="footer-small">&copy; <span id="currentYear"></span> Hospera Institute of Hospitality. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="careers.html">Careers &amp; Admissions</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+918523072664">+91 8523072664</a>
+        <a href="tel:+919032014622">+91 9032014622</a>
+        <a href="mailto:info@hosperainstitute.com">info@hosperainstitute.com</a>
+        <a href="mailto:admissions@hosperainstitute.com">admissions@hosperainstitute.com</a>
+        <a href="contact.html">Contact & Enquiry</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var chips = document.querySelectorAll(".chip-row .chip");
+      if (chips.length > 1) {
+        chips[1].textContent = "\u20B9Arabic Language, Gulf Essential";
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

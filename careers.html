@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers, Placement & Admissions | Hospera Institute of Hospitality</title>
+  <meta name="description" content="Discover where Hospera graduates work, the step-by-step placement roadmap, hotel brands you can target, and how to enroll." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    /* ══ OUTCOME PILLARS ══ */
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 1px;
+      background: rgba(216,177,120,0.14);
+      border: 1px solid rgba(216,177,120,0.14);
+      border-radius: 26px;
+      overflow: hidden;
+      margin-top: 52px;
+    }
+    .outcome-cell {
+      padding: 36px 28px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .outcome-icon {
+      width: 52px; height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .outcome-icon svg { width: 24px; height: 24px; color: var(--navy-900); }
+    .outcome-number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.8rem; font-weight: 700;
+      color: var(--navy-900); line-height: 0.9; letter-spacing: -0.04em;
+    }
+    .outcome-number em { font-style: normal; color: var(--gold-500); }
+    .outcome-label { font-size: 0.82rem; font-weight: 700; color: var(--text-soft); line-height: 1.5; }
+    .outcome-sublabel { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-500); }
+
+    /* ══ ROADMAP ══ */
+    .roadmap-track { position: relative; padding: 8px 0 40px; }
+    .roadmap-track::before {
+      content: ""; position: absolute;
+      left: 50%; top: 0; bottom: 0; width: 2px;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, transparent 0%, rgba(216,177,120,0.5) 8%, rgba(216,177,120,0.5) 92%, transparent 100%);
+    }
+    .roadmap-step {
+      display: grid;
+      grid-template-columns: 1fr 72px 1fr;
+      gap: 0 24px;
+      align-items: center;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .roadmap-step:last-child { margin-bottom: 0; }
+    .roadmap-step .rs-card { grid-column: 1; }
+    .roadmap-step .rs-node { grid-column: 2; }
+    .roadmap-step .rs-spacer { grid-column: 3; }
+    .roadmap-step.right .rs-card { grid-column: 3; grid-row: 1; }
+    .roadmap-step.right .rs-node { grid-column: 2; grid-row: 1; }
+    .roadmap-step.right .rs-spacer { grid-column: 1; grid-row: 1; }
+    .rs-node { display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 2; }
+    .rs-circle {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      display: grid; place-items: center;
+      box-shadow: 0 0 0 6px rgba(216,177,120,0.15), 0 8px 24px rgba(184,138,70,0.22);
+    }
+    .rs-circle svg { width: 22px; height: 22px; color: var(--navy-900); }
+    .rs-step-label { font-size: 0.6rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-400); white-space: nowrap; }
+    .rs-card {
+      padding: 24px 26px; border-radius: 22px;
+      border: 1px solid rgba(216,177,120,0.18);
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      backdrop-filter: blur(18px);
+      box-shadow: 0 14px 32px rgba(2,8,16,0.18);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .rs-card:hover { transform: translateY(-4px); border-color: rgba(216,177,120,0.34); }
+    .rs-month { display: inline-block; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-400); margin-bottom: 8px; }
+    .rs-title { margin: 0 0 8px; font-family: "Cormorant Garamond", serif; font-size: 1.5rem; font-weight: 600; color: #fff; line-height: 1.05; letter-spacing: -0.02em; }
+    .rs-copy { margin: 0; font-size: 0.86rem; color: rgba(255,255,255,0.68); line-height: 1.68; }
+    .rs-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .rs-tag { padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(216,177,120,0.22); background: rgba(255,255,255,0.06); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+    .rs-spacer {}
+    .roadmap-outcome { margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+    .roadmap-outcome-badge {
+      display: inline-flex; align-items: center; gap: 14px; padding: 18px 32px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      color: var(--navy-900); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+      box-shadow: 0 16px 40px rgba(184,138,70,0.28);
+    }
+    .roadmap-outcome-badge svg { width: 20px; height: 20px; }
+    .roadmap-outcome-copy { max-width: 46ch; color: rgba(255,255,255,0.68); font-size: 0.92rem; line-height: 1.68; }
+
+    /* ══ ROLES ══ */
+    .roles-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .role-card {
+      padding: 28px 24px; border-radius: 22px;
+      border: 1px solid rgba(31,24,18,0.07); background: #ffffff;
+      box-shadow: 0 4px 18px rgba(17,21,28,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative; overflow: hidden;
+    }
+    .role-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-500), var(--gold-400), transparent); }
+    .role-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(17,21,28,0.10); }
+    .role-dept { display: inline-block; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-500); margin-bottom: 10px; }
+    .role-title { margin: 0 0 10px; font-family: "Cormorant Garamond", serif; font-size: 1.65rem; font-weight: 600; color: var(--navy-900); line-height: 1.05; letter-spacing: -0.02em; }
+    .role-copy { font-size: 0.86rem; color: var(--text-soft); line-height: 1.7; margin: 0 0 14px; }
+    .role-salary { display: none; }
+
+    /* ══ BRANDS ══ */
+    .brands-intro { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; margin-bottom: 40px; }
+    .brands-count-pill { display: inline-flex; flex-direction: column; align-items: center; padding: 20px 28px; border-radius: 22px; border: 1px solid rgba(216,177,120,0.2); background: rgba(255,255,255,0.04); text-align: center; flex-shrink: 0; }
+    .brands-count-pill strong { font-family: "Cormorant Garamond", serif; font-size: 3rem; font-weight: 700; color: var(--gold-400); line-height: 0.9; }
+    .brands-count-pill span { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 6px; }
+    .tier-block { margin-bottom: 40px; }
+    .tier-block:last-child { margin-bottom: 0; }
+    .tier-label { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+    .tier-label-text { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-400); }
+    .tier-label::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(216,177,120,0.4), transparent); }
+    .brands-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+    .brand-pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 14px; border: 1px solid rgba(216,177,120,0.16); background: rgba(255,255,255,0.05); transition: border-color 0.25s, background 0.25s, transform 0.2s; cursor: default; }
+    .brand-pill:hover { border-color: rgba(216,177,120,0.36); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .brand-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-400); flex-shrink: 0; }
+    .brand-pill-name { font-size: 0.86rem; font-weight: 600; color: rgba(255,255,255,0.82); white-space: nowrap; }
+    .brand-pill-sub { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(216,177,120,0.6); }
+    .brand-pill.gulf { border-color: rgba(92,136,255,0.2); background: rgba(92,136,255,0.05); }
+    .brand-pill.gulf .brand-dot { background: #7fa8ff; }
+    .brand-pill.gulf .brand-pill-sub { color: rgba(127,168,255,0.7); }
+    .brand-pill.gulf:hover { border-color: rgba(92,136,255,0.36); }
+
+    /* ══ SALARY ══ */
+    .salary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .salary-panel { padding: 36px; border-radius: 26px; border: 1px solid rgba(31,24,18,0.07); background: #ffffff; box-shadow: 0 4px 18px rgba(17,21,28,0.06); position: relative; overflow: hidden; }
+    .salary-panel::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold-500), var(--gold-400)); }
+    .salary-panel.gulf-panel::before { background: linear-gradient(90deg, #4a7cf5, #7fa8ff); }
+    .salary-region { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-500); margin-bottom: 8px; }
+    .salary-panel.gulf-panel .salary-region { color: #4a7cf5; }
+    .salary-heading { font-family: "Cormorant Garamond", serif; font-size: 1.9rem; font-weight: 600; color: var(--navy-900); margin: 0 0 20px; line-height: 1; }
+    .salary-rows { display: grid; gap: 12px; }
+    .salary-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid rgba(31,24,18,0.06); gap: 12px; }
+    .salary-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .salary-role { font-size: 0.86rem; color: var(--text-soft); }
+    .salary-amount { font-family: "Cormorant Garamond", serif; font-size: 1.3rem; font-weight: 600; color: var(--navy-900); white-space: nowrap; }
+    .salary-note { margin-top: 20px; padding: 12px 16px; border-radius: 12px; background: rgba(184,138,70,0.07); border: 1px solid rgba(184,138,70,0.14); font-size: 0.78rem; color: var(--text-soft); line-height: 1.6; }
+    .salary-panel.gulf-panel .salary-note { background: rgba(74,124,245,0.05); border-color: rgba(74,124,245,0.14); }
+
+    /* ══ GULF BANNER ══ */
+    .gulf-banner { position: relative; border-radius: 30px; overflow: hidden; border: 1px solid rgba(74,124,245,0.22); background: linear-gradient(135deg, rgba(13,24,46,0.92), rgba(10,18,36,0.96)); padding: 48px 52px; }
+    .gulf-banner::before { content: ""; position: absolute; top: -60px; right: -60px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(74,124,245,0.16), transparent 70%); filter: blur(10px); pointer-events: none; }
+    .gulf-banner-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .gulf-stat-row { display: flex; gap: 40px; margin-top: 24px; flex-wrap: wrap; }
+    .gulf-stat strong { display: block; font-family: "Cormorant Garamond", serif; font-size: 2.4rem; font-weight: 700; color: #7fa8ff; line-height: 0.9; letter-spacing: -0.04em; }
+    .gulf-stat span { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.48); }
+    .gulf-perks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .gulf-perks li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.6; }
+    .gulf-perks li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #7fa8ff; flex-shrink: 0; margin-top: 9px; }
+
+    /* ══ SUPPORT STEPS ══ */
+    .support-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .support-card { padding: 30px 26px; border-radius: 22px; border: 1px solid rgba(216,177,120,0.22); background: linear-gradient(180deg, #ffffff, #fdfaf4); box-shadow: 0 12px 30px rgba(17,21,28,0.06); position: relative; overflow: hidden; }
+    .support-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 18%, rgba(216,177,120,0.08) 42%, transparent 62%); transform: translateX(-140%); animation: shimmer 11s ease-in-out infinite; pointer-events: none; }
+    @keyframes shimmer { 0%, 100% { transform: translateX(-140%); opacity: 0; } 12% { opacity: 0.4; } 34% { transform: translateX(140%); opacity: 0; } }
+    .support-num { font-family: "Cormorant Garamond", serif; font-size: 3.5rem; font-weight: 700; color: rgba(184,138,70,0.34); line-height: 0.9; margin-bottom: 14px; letter-spacing: -0.04em; }
+    .support-title { margin: 0 0 10px; font-family: "Cormorant Garamond", serif; font-size: 1.5rem; font-weight: 700; color: var(--navy-900); letter-spacing: -0.02em; line-height: 1.1; }
+    .support-copy { margin: 0; font-size: 0.86rem; color: var(--text-soft); line-height: 1.7; }
+
+    /* ══ ENROLL FLOW ══ */
+    .enroll-flow { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0; background: rgba(216,177,120,0.12); border: 1px solid rgba(216,177,120,0.14); border-radius: 24px; overflow: hidden; }
+    .enroll-step { padding: 32px 26px; background: #ffffff; border-right: 1px solid rgba(31,24,18,0.07); position: relative; transition: background 0.25s; }
+    .enroll-step:last-child { border-right: 0; }
+    .enroll-step:hover { background: #fdfaf4; }
+    .enroll-step-num { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, var(--gold-400), var(--gold-500)); display: grid; place-items: center; font-family: "Cormorant Garamond", serif; font-size: 1.4rem; font-weight: 700; color: var(--navy-900); margin-bottom: 18px; }
+    .enroll-step-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; border-radius: 50%; background: var(--gold-400); display: grid; place-items: center; z-index: 2; }
+    .enroll-step:last-child .enroll-step-arrow { display: none; }
+    .enroll-step-arrow svg { width: 12px; height: 12px; color: var(--navy-900); }
+    .enroll-step-title { margin: 0 0 8px; font-family: "Cormorant Garamond", serif; font-size: 1.4rem; font-weight: 600; color: var(--navy-900); line-height: 1.1; }
+    .enroll-step-copy { font-size: 0.84rem; color: var(--text-soft); line-height: 1.68; margin: 0; }
+
+    /* ══ CONTACT BAND ══ */
+    .contact-band { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-bottom: 40px; }
+    .contact-band-card { padding: 28px; border-radius: 22px; border: 1px solid rgba(31,24,18,0.07); background: #ffffff; box-shadow: 0 4px 18px rgba(17,21,28,0.05); display: flex; align-items: flex-start; gap: 18px; }
+    .contact-band-icon { width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, var(--gold-400), var(--gold-500)); display: grid; place-items: center; flex-shrink: 0; }
+    .contact-band-icon svg { width: 20px; height: 20px; color: var(--navy-900); }
+    .contact-band-label { font-size: 0.64rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-500); margin-bottom: 4px; }
+    .contact-band-value { font-family: "Cormorant Garamond", serif; font-size: 1.2rem; font-weight: 600; color: var(--navy-900); line-height: 1.2; margin-bottom: 4px; }
+    .contact-band-note { font-size: 0.8rem; color: var(--text-soft); line-height: 1.55; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 1100px) {
+      .outcome-grid { grid-template-columns: repeat(2, 1fr); }
+      .roles-grid { grid-template-columns: repeat(2, 1fr); }
+      .support-grid { grid-template-columns: repeat(2, 1fr); }
+      .enroll-flow { grid-template-columns: repeat(2, 1fr); }
+      .enroll-step:nth-child(2) { border-right: 0; }
+      .enroll-step:nth-child(1), .enroll-step:nth-child(2) { border-bottom: 1px solid rgba(31,24,18,0.07); }
+      .gulf-banner-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 800px) {
+      .roadmap-track::before { left: 28px; }
+      .roadmap-step { grid-template-columns: 58px 1fr; }
+      .roadmap-step .rs-node { grid-column: 1; grid-row: 1; align-self: start; }
+      .roadmap-step .rs-card { grid-column: 2; grid-row: 1; }
+      .roadmap-step .rs-spacer { display: none; }
+      .roadmap-step.right .rs-node { grid-column: 1; }
+      .roadmap-step.right .rs-card { grid-column: 2; }
+      .roadmap-step.right .rs-spacer { display: none; }
+      .rs-circle { width: 44px; height: 44px; }
+      .rs-step-label { display: none; }
+      .salary-grid { grid-template-columns: 1fr; }
+      .contact-band { grid-template-columns: 1fr; }
+      .roles-grid { grid-template-columns: 1fr; }
+      .support-grid { grid-template-columns: 1fr; }
+      .enroll-flow { grid-template-columns: 1fr; }
+      .enroll-step { border-right: 0 !important; border-bottom: 1px solid rgba(31,24,18,0.07) !important; }
+      .enroll-step:last-child { border-bottom: 0 !important; }
+      .enroll-step-arrow { display: none; }
+      .brands-intro { grid-template-columns: 1fr; }
+      .gulf-banner { padding: 32px 26px; }
+    }
+    @media (max-width: 560px) {
+      .outcome-grid { grid-template-columns: 1fr; }
+    }
+
+    .careers-compact-page .page-hero {
+      min-height: 54svh;
+      padding: calc(var(--header-height) + 28px) 0 46px;
+    }
+    .careers-compact-page .section {
+      padding: clamp(38px, 4vw, 56px) 0;
+    }
+    .careers-compact-page .section-header {
+      margin-bottom: 20px;
+    }
+    .careers-compact-page .outcome-grid {
+      margin-top: 30px;
+    }
+    .careers-compact-page .outcome-cell,
+    .careers-compact-page .role-card,
+    .careers-compact-page .support-card,
+    .careers-compact-page .contact-band-card {
+      padding: 22px;
+    }
+    .careers-compact-page .roadmap-step {
+      margin-bottom: 22px;
+    }
+    .careers-compact-page .rs-card {
+      padding: 20px 22px;
+    }
+    .careers-compact-page #salaries {
+      display: none;
+    }
+    .careers-compact-page .gulf-stat-row {
+      gap: 22px;
+    }
+    .careers-compact-page .gulf-banner {
+      padding: 36px 38px;
+    }
+    .careers-compact-page .support-grid,
+    .careers-compact-page .roles-grid,
+    .careers-compact-page .contact-band,
+    .careers-compact-page .feature-grid.two {
+      gap: 14px;
+    }
+    @media (max-width: 800px) {
+      .careers-compact-page .page-hero {
+        min-height: auto;
+        padding: calc(var(--header-height) + 24px) 0 38px;
+      }
+      .careers-compact-page .gulf-banner {
+        padding: 26px 22px;
+      }
+      .careers-compact-page .outcome-grid {
+        margin-top: 20px;
+      }
+      .careers-compact-page .outcome-cell,
+      .careers-compact-page .role-card,
+      .careers-compact-page .support-card,
+      .careers-compact-page .enroll-step,
+      .careers-compact-page .table-card {
+        padding: 18px;
+      }
+      .careers-compact-page .outcome-number {
+        font-size: 2.15rem;
+      }
+      .careers-compact-page .roadmap-track {
+        padding-bottom: 18px;
+      }
+      .careers-compact-page .roadmap-track::before,
+      .careers-compact-page .rs-node,
+      .careers-compact-page .rs-tags,
+      .careers-compact-page .support-num {
+        display: none;
+      }
+      .careers-compact-page .roadmap-step,
+      .careers-compact-page .roadmap-step.right {
+        display: block;
+        margin-bottom: 12px;
+      }
+      .careers-compact-page .roadmap-step .rs-card,
+      .careers-compact-page .roadmap-step.right .rs-card {
+        display: block;
+      }
+      .careers-compact-page .rs-card {
+        padding: 16px 18px;
+        border-radius: 16px;
+      }
+      .careers-compact-page .rs-title,
+      .careers-compact-page .role-title,
+      .careers-compact-page .support-title,
+      .careers-compact-page .enroll-step-title {
+        font-size: 1.25rem;
+      }
+      .careers-compact-page .rs-copy,
+      .careers-compact-page .role-copy,
+      .careers-compact-page .support-copy,
+      .careers-compact-page .enroll-step-copy,
+      .careers-compact-page .section-intro {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+      }
+      .careers-compact-page .brands-intro {
+        margin-bottom: 18px;
+      }
+      .careers-compact-page .tier-block {
+        margin-bottom: 22px;
+      }
+      .careers-compact-page .brand-pill {
+        padding: 8px 10px;
+        gap: 7px;
+      }
+      .careers-compact-page .brand-pill:nth-child(n+7),
+      .careers-compact-page .gulf-perks li:nth-child(n+5) {
+        display: none;
+      }
+      .careers-compact-page .brand-pill-name {
+        white-space: normal;
+        font-size: 0.78rem;
+      }
+      .careers-compact-page .brand-pill-sub,
+      .careers-compact-page .enroll-step-arrow {
+        display: none;
+      }
+      .careers-compact-page .info-row {
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body class="careers-compact-page">
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Hospera Institute home">
+        <span class="brand-mark"><img src="assets/hospera_logo_transparent.png" alt="Hospera logo" /></span>
+        <span class="brand-copy">
+          <span class="brand-title">Hospera</span>
+          <span class="brand-subtitle">Institute of Hospitality</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="programs.html">Programs</a>
+          <a href="careers.html" class="active">Careers &amp; Admissions</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-outline" href="programs.html">Program</a>
+          <a class="btn btn-gold" href="apply.html">Apply Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-shell">
+
+    <!-- HERO -->
+    <section class="page-hero has-video" style="background-image: url('assets/hospitality-scene.jpg');">
+      <video class="hero-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" poster="assets/hospitality-scene.jpg" aria-hidden="true">
+        <source src="assets/videos/hero-careers-team.mp4" type="video/mp4" />
+      </video>
+      <div class="container" data-reveal>
+        <span class="section-kicker">Careers · Placement · Admissions</span>
+        <h1 class="page-hero-title">Six months of training. <span class="highlight">A career that lasts a lifetime.</span></h1>
+        <p class="page-hero-copy">
+          Understand exactly what you'll learn, where you'll work, how much you can earn, and what Hospera does to get you there — step by step.
+        </p>
+        <div class="page-menu">
+          <a href="#outcomes">What You Get</a>
+          <a href="#roadmap">Your Roadmap</a>
+          <a href="#roles">Your Role</a>
+          <a href="#brands">Where You'll Work</a>
+          <a href="#admissions">Enroll</a>
+          <a href="#placement-support">Placement Support</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── WHAT YOU GET ── -->
+    <section class="section section-light section-anchor" id="outcomes">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">What Hospera Gives You</span>
+          <h2 class="section-title">Four things most institutes <span class="highlight">never teach</span></h2>
+          <p class="section-intro">Most hospitality courses give you a certificate. Hospera gives you four things hotels actually hire for: system confidence, language readiness, service excellence, and placement support that works.</p>
+        </div>
+        <div class="outcome-grid" data-reveal>
+          <div class="outcome-cell">
+            <div class="outcome-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div class="outcome-number">Opera <em>PMS</em></div>
+            <div class="outcome-label">Full mastery of the world's most-used hotel management system — 16 dedicated sessions and a graded simulation test.</div>
+            <div class="outcome-sublabel">Used in Marriott · Hilton · Hyatt</div>
+          </div>
+          <div class="outcome-cell">
+            <div class="outcome-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="outcome-number">Arabic <em>Ready</em></div>
+            <div class="outcome-label">12 sessions of Gulf-focused Arabic — from basic greetings to full unscripted hotel conversations — a direct edge in Middle East recruitment.</div>
+            <div class="outcome-sublabel">Essential for UAE · Qatar · Saudi</div>
+          </div>
+          <div class="outcome-cell">
+            <div class="outcome-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="outcome-number">5<em>★</em> Ready</div>
+            <div class="outcome-label">Grooming, guest handling, complaint resolution, upselling, and service etiquette trained to the standard luxury hotels genuinely expect on day one.</div>
+            <div class="outcome-sublabel">Taj · Oberoi · Four Seasons standard</div>
+          </div>
+          <div class="outcome-cell">
+            <div class="outcome-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="outcome-number">100<em>%</em></div>
+            <div class="outcome-label">Placement assistance focus — CV coaching, two mock interview rounds, hotel referral letters, and direct HR introductions for every graduate.</div>
+            <div class="outcome-sublabel">India placements + Gulf pathways</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── ROADMAP ── -->
+    <section class="section section-dark section-anchor" id="roadmap">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Your Placement Roadmap</span>
+          <h2 class="section-title">From the day you enroll to the <span class="highlight">day you're hired</span></h2>
+          <p class="section-intro">Every step is mapped. Every month has a purpose. This is not a vague promise — it is a structured journey with a clear job outcome at the end.</p>
+        </div>
+
+        <div class="roadmap-track" data-reveal>
+
+          <div class="roadmap-step">
+            <div class="rs-card">
+              <span class="rs-month">Before Day 1</span>
+              <h3 class="rs-title">You Apply &amp; Get Confirmed</h3>
+              <p class="rs-copy">Submit your application, attend a short interaction with the admissions team, and secure your seat. Batch sizes are kept small — maximum 25 students — so your place is confirmed before the program begins.</p>
+              <div class="rs-tags"><span class="rs-tag">Application</span><span class="rs-tag">Admission Interview</span><span class="rs-tag">Seat Confirmed</span></div>
+            </div>
+            <div class="rs-node">
+              <div class="rs-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              <span class="rs-step-label">Enroll</span>
+            </div>
+            <div class="rs-spacer"></div>
+          </div>
+
+          <div class="roadmap-step right">
+            <div class="rs-spacer"></div>
+            <div class="rs-node">
+              <div class="rs-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+              <span class="rs-step-label">Month 1–2</span>
+            </div>
+            <div class="rs-card">
+              <span class="rs-month">Month 1 – 2</span>
+              <h3 class="rs-title">Foundation &amp; Opera PMS</h3>
+              <p class="rs-copy">You begin with professional communication, grooming standards, spoken English, and personality development. From Month 2, you learn Opera PMS — the same hotel management software used in Marriott, Hilton, and Hyatt properties worldwide — from zero to a full graded simulation test.</p>
+              <div class="rs-tags"><span class="rs-tag">Grooming</span><span class="rs-tag">Communication</span><span class="rs-tag">Opera PMS</span><span class="rs-tag">Phone &amp; Email</span></div>
+            </div>
+          </div>
+
+          <div class="roadmap-step">
+            <div class="rs-card">
+              <span class="rs-month">Month 3 – 4</span>
+              <h3 class="rs-title">Front Office + Arabic Begins</h3>
+              <p class="rs-copy">You step into live front desk simulations — reservations, check-in, upselling, complaint handling — all using Opera. Arabic starts at foundation level in Month 3, building to intermediate by Month 4 where you can handle a full hotel reservation in Arabic.</p>
+              <div class="rs-tags"><span class="rs-tag">Front Desk</span><span class="rs-tag">Upselling</span><span class="rs-tag">Opera Simulation</span><span class="rs-tag">Arabic Foundation</span><span class="rs-tag">Housekeeping</span></div>
+            </div>
+            <div class="rs-node">
+              <div class="rs-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <span class="rs-step-label">Month 3–4</span>
+            </div>
+            <div class="rs-spacer"></div>
+          </div>
+
+          <div class="roadmap-step right">
+            <div class="rs-spacer"></div>
+            <div class="rs-node">
+              <div class="rs-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <span class="rs-step-label">Month 5</span>
+            </div>
+            <div class="rs-card">
+              <span class="rs-month">Month 5</span>
+              <h3 class="rs-title">Business Skills + Arabic Advanced</h3>
+              <p class="rs-copy">You study business tools that managers use — SWOT analysis, KPIs, RevPAR, Mendelow Matrix. Arabic reaches advanced speaking level. A hotel general manager addresses the batch as a guest speaker. You attend a 5-star hotel site visit in Hyderabad.</p>
+              <div class="rs-tags"><span class="rs-tag">SWOT &amp; KPIs</span><span class="rs-tag">RevPAR</span><span class="rs-tag">Arabic Advanced</span><span class="rs-tag">Hotel Visit</span><span class="rs-tag">Industry Speaker</span></div>
+            </div>
+          </div>
+
+          <div class="roadmap-step">
+            <div class="rs-card">
+              <span class="rs-month">Month 6</span>
+              <h3 class="rs-title">Placement Preparation</h3>
+              <p class="rs-copy">The final month is entirely focused on getting you hired. CV writing, LinkedIn setup, cover letter coaching, two full mock interview rounds on video with written feedback, and direct hotel referral letters from the founding directors.</p>
+              <div class="rs-tags"><span class="rs-tag">CV &amp; LinkedIn</span><span class="rs-tag">Mock Interviews</span><span class="rs-tag">Referral Letters</span><span class="rs-tag">HR Introductions</span></div>
+            </div>
+            <div class="rs-node">
+              <div class="rs-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+              <span class="rs-step-label">Month 6</span>
+            </div>
+            <div class="rs-spacer"></div>
+          </div>
+
+          <div class="roadmap-step right">
+            <div class="rs-spacer"></div>
+            <div class="rs-node">
+              <div class="rs-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <span class="rs-step-label">Placed</span>
+            </div>
+            <div class="rs-card">
+              <span class="rs-month">Graduation Day</span>
+              <h3 class="rs-title">Certified + Referred + Career Ready</h3>
+              <p class="rs-copy">You graduate with the Professional Diploma in Hotel Operations, a personal reference letter from the founding directors, a career readiness score, and active hotel introductions already in progress. Graduation is not the end — it is the beginning.</p>
+              <div class="rs-tags"><span class="rs-tag">Diploma Awarded</span><span class="rs-tag">Reference Letter</span><span class="rs-tag">Alumni Network</span><span class="rs-tag">Active Referrals</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="roadmap-outcome" data-reveal>
+          <div class="roadmap-outcome-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>
+            Outcome: First Hotel Role — India or Gulf
+          </div>
+          <p class="roadmap-outcome-copy">Every step of the program is designed with this moment in mind. You don't graduate hoping for a job — you graduate with a clear pathway to one.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── ROLES ── -->
+    <section class="section section-light section-anchor" id="roles">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Your Career Destination</span>
+          <h2 class="section-title">The exact roles <span class="highlight">Hospera trains you for</span></h2>
+          <p class="section-intro">These are not aspirational suggestions. Every role listed here is directly tied to a specific module in the Hospera program. If you complete the course and pass the assessments, you are trained and ready for these positions.</p>
+        </div>
+        <div class="roles-grid" data-reveal>
+          <div class="role-card">
+            <div class="role-dept">Front Office</div>
+            <h3 class="role-title">Front Office Supervisor / Agent</h3>
+            <p class="role-copy">The primary target role for Hospera graduates. Handle check-in, check-out, guest queries, Opera PMS, and shift-level responsibility — trained across 4 months of dedicated front desk sessions including graded simulation tests.</p>
+            <span class="role-salary">India: ₹20,000 – ₹35,000 / month</span>
+          </div>
+          <div class="role-card">
+            <div class="role-dept">Reservations</div>
+            <h3 class="role-title">Reservations Agent</h3>
+            <p class="role-copy">Phone-based reservations, Opera booking workflows, availability management, upselling, and email confirmation — all trained in live call simulations with instructor scoring throughout the program.</p>
+            <span class="role-salary">India: ₹18,000 – ₹28,000 / month</span>
+          </div>
+          <div class="role-card">
+            <div class="role-dept">Guest Relations</div>
+            <h3 class="role-title">Guest Relations Executive</h3>
+            <p class="role-copy">VIP guest handling, service recovery, loyalty management, and high-touch communication skills built through 16 sessions of personality and communication training — a direct fit for luxury hotel GRE roles.</p>
+            <span class="role-salary">India: ₹22,000 – ₹38,000 / month</span>
+          </div>
+          <div class="role-card">
+            <div class="role-dept">Concierge</div>
+            <h3 class="role-title">Concierge / Guest Services Agent</h3>
+            <p class="role-copy">Transport arrangement, restaurant bookings, local knowledge, and high-end guest assistance — trained through dedicated concierge sessions in Month 3 and advanced guest experience modules in Month 5.</p>
+            <span class="role-salary">India: ₹18,000 – ₹30,000 / month</span>
+          </div>
+          <div class="role-card">
+            <div class="role-dept">Food &amp; Beverage</div>
+            <h3 class="role-title">F&amp;B Service Associate</h3>
+            <p class="role-copy">Table setup, service styles, order taking, upselling, and dietary handling covered in F&amp;B practical sessions in Month 4. An additional pathway for graduates who want to enter the restaurant and banquet side of hotel operations.</p>
+            <span class="role-salary">India: ₹16,000 – ₹26,000 / month</span>
+          </div>
+          <div class="role-card">
+            <div class="role-dept">Gulf Region</div>
+            <h3 class="role-title">Hotel Associate — UAE / Qatar / KSA</h3>
+            <p class="role-copy">12 sessions of Arabic, Opera PMS, UK service standards, and Gulf-specific training position Hospera graduates for hotel roles in Dubai, Abu Dhabi, Doha, and Riyadh.</p>
+            <span class="role-salary">Gulf: AED 3,000 – 6,000 / month + benefits</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── BRANDS ── -->
+    <section class="section section-dark section-anchor" id="brands">
+      <div class="container">
+
+        <div class="brands-intro" data-reveal>
+          <div>
+            <span class="section-kicker">Where Hospera Graduates Work</span>
+            <h2 class="section-title">The hotel brands you are <span class="highlight">trained to walk into</span></h2>
+            <p class="section-intro">Our curriculum, Opera PMS training, and service standards are built around what these brands hire for. Every hotel group below uses the same software, the same service frameworks, and the same guest expectations that Hospera teaches.</p>
+          </div>
+          <div class="brands-count-pill">
+            <strong>30+</strong>
+            <span>Target<br>Hotel<br>Brands</span>
+          </div>
+        </div>
+
+        <div class="tier-block" data-reveal>
+          <div class="tier-label"><span class="tier-label-text">India · Luxury &amp; Premium Hotels</span></div>
+          <div class="brands-wrap">
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Taj Hotels &amp; Resorts</span><span class="brand-pill-sub">Luxury</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Taj Falaknuma Palace</span><span class="brand-pill-sub">Ultra Luxury · Hyderabad</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Taj Krishna</span><span class="brand-pill-sub">Luxury · Hyderabad</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Oberoi Hotels &amp; Resorts</span><span class="brand-pill-sub">Ultra Luxury</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">The Leela Palaces</span><span class="brand-pill-sub">Luxury</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">ITC Hotels</span><span class="brand-pill-sub">Premium</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">ITC Kakatiya</span><span class="brand-pill-sub">Luxury · Hyderabad</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">The Lalit Hotels</span><span class="brand-pill-sub">Luxury</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Lemon Tree Hotels</span><span class="brand-pill-sub">Premium</span></div>
+          </div>
+        </div>
+
+        <div class="tier-block" data-reveal>
+          <div class="tier-label"><span class="tier-label-text">Global Chains · Operating in India &amp; Worldwide</span></div>
+          <div class="brands-wrap">
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Marriott International</span><span class="brand-pill-sub">30 Brands</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">JW Marriott</span><span class="brand-pill-sub">Luxury · Marriott</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Sheraton Hotels</span><span class="brand-pill-sub">Marriott Group</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Westin Hotels</span><span class="brand-pill-sub">Marriott Group</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Hilton Hotels</span><span class="brand-pill-sub">18 Brands · Global</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Doubletree by Hilton</span><span class="brand-pill-sub">Hilton Group</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Hyatt Hotels</span><span class="brand-pill-sub">20+ Brands</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Park Hyatt</span><span class="brand-pill-sub">Luxury · Hyatt</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Hyatt Regency Hyderabad</span><span class="brand-pill-sub">Local Target</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">IHG Hotels &amp; Resorts</span><span class="brand-pill-sub">18 Brands · UK</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">InterContinental</span><span class="brand-pill-sub">IHG Luxury</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Crowne Plaza</span><span class="brand-pill-sub">IHG Premium</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Accor Hotels</span><span class="brand-pill-sub">40+ Brands</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Pullman Hotels</span><span class="brand-pill-sub">Accor Luxury</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Novotel</span><span class="brand-pill-sub">Accor Premium</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Radisson Blu</span><span class="brand-pill-sub">Radisson Group</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Four Seasons Hotels</span><span class="brand-pill-sub">Ultra Luxury</span></div>
+            <div class="brand-pill"><span class="brand-dot"></span><span class="brand-pill-name">Wyndham Hotels</span><span class="brand-pill-sub">24 Brands</span></div>
+          </div>
+        </div>
+
+        <div class="tier-block" data-reveal>
+          <div class="tier-label"><span class="tier-label-text">Gulf &amp; Middle East · Arabic-Advantaged Roles</span></div>
+          <div class="brands-wrap">
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Jumeirah Group</span><span class="brand-pill-sub">Dubai · Ultra Luxury</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Burj Al Arab</span><span class="brand-pill-sub">Jumeirah · Iconic</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Atlantis The Palm</span><span class="brand-pill-sub">Dubai · Resort</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Rotana Hotels</span><span class="brand-pill-sub">UAE · 100+ Properties</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Kempinski Hotels</span><span class="brand-pill-sub">Gulf · Luxury</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Address Hotels &amp; Resorts</span><span class="brand-pill-sub">Dubai · Emaar</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Waldorf Astoria</span><span class="brand-pill-sub">Hilton · Gulf Luxury</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Conrad Hotels</span><span class="brand-pill-sub">Hilton · Gulf</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Fairmont Hotels</span><span class="brand-pill-sub">Accor · Gulf</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Sofitel Hotels</span><span class="brand-pill-sub">Accor · Gulf &amp; India</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Rixos Hotels</span><span class="brand-pill-sub">UAE · Resort Luxury</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Anantara Hotels</span><span class="brand-pill-sub">Minor · Gulf</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Shangri-La Hotels</span><span class="brand-pill-sub">Gulf &amp; Asia Pacific</span></div>
+            <div class="brand-pill gulf"><span class="brand-dot"></span><span class="brand-pill-name">Mandarin Oriental</span><span class="brand-pill-sub">Ultra Luxury · Gulf</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── SALARY ── -->
+    <section class="section section-light section-anchor" id="salaries">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Earning Potential</span>
+          <h2 class="section-title">What you can realistically <span class="highlight">expect to earn</span></h2>
+          <p class="section-intro">Starting salaries depend on the hotel tier, city, and your performance in assessment. These are realistic ranges based on current market conditions for entry-level roles in India and the Gulf.</p>
+        </div>
+        <div class="salary-grid" data-reveal>
+          <div class="salary-panel">
+            <div class="salary-region">India — Domestic Placements</div>
+            <div class="salary-heading">Starting in India</div>
+            <div class="salary-rows">
+              <div class="salary-row"><span class="salary-role">Front Office Agent / Supervisor</span><span class="salary-amount">₹18,000 – ₹35,000</span></div>
+              <div class="salary-row"><span class="salary-role">Guest Relations Executive</span><span class="salary-amount">₹22,000 – ₹38,000</span></div>
+              <div class="salary-row"><span class="salary-role">Reservations Agent</span><span class="salary-amount">₹18,000 – ₹28,000</span></div>
+              <div class="salary-row"><span class="salary-role">F&amp;B Service Associate</span><span class="salary-amount">₹16,000 – ₹26,000</span></div>
+              <div class="salary-row"><span class="salary-role">Luxury Hotel Average Start</span><span class="salary-amount">₹1.20 Lakhs / year</span></div>
+            </div>
+            <div class="salary-note">Salaries at 5-star properties in metros like Hyderabad, Mumbai, and Delhi are significantly higher than budget hotels. Hospera's training is calibrated to the luxury tier.</div>
+          </div>
+          <div class="salary-panel gulf-panel">
+            <div class="salary-region">Gulf Region — UAE · Qatar · Saudi Arabia</div>
+            <div class="salary-heading">Gulf Earning Potential</div>
+            <div class="salary-rows">
+              <div class="salary-row"><span class="salary-role">Front Office Agent (UAE)</span><span class="salary-amount">AED 3,000 – 4,500</span></div>
+              <div class="salary-row"><span class="salary-role">Guest Relations (Dubai)</span><span class="salary-amount">AED 3,500 – 6,000</span></div>
+              <div class="salary-row"><span class="salary-role">F&amp;B Associate (Qatar)</span><span class="salary-amount">QAR 3,000 – 4,500</span></div>
+              <div class="salary-row"><span class="salary-role">Front Office (Saudi Arabia)</span><span class="salary-amount">SAR 3,500 – 5,500</span></div>
+              <div class="salary-row"><span class="salary-role">Approx. in INR (UAE)</span><span class="salary-amount">₹78,000 – ₹1.65 L / mo</span></div>
+            </div>
+            <div class="salary-note">Gulf salaries are tax-free in most countries. Many hotel packages include accommodation, meals, and annual flights home — significantly increasing total compensation beyond the base figure.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── GULF OPPORTUNITY ── -->
+    <section class="section section-dark section-anchor" id="gulf">
+      <div class="container">
+        <div class="gulf-banner" data-reveal>
+          <div class="gulf-banner-inner">
+            <div>
+              <span class="section-kicker">Gulf Career Pathway</span>
+              <h2 class="section-title" style="color:#fff;">Why the Gulf is the best opportunity for <span style="color:#7fa8ff;">Indian hospitality graduates</span></h2>
+              <div class="gulf-stat-row">
+                <div class="gulf-stat"><strong>0%</strong><span>Income Tax<br>UAE &amp; Qatar</span></div>
+                <div class="gulf-stat"><strong>500K+</strong><span>Hotel Rooms<br>across Gulf by 2030</span></div>
+                <div class="gulf-stat"><strong>Global</strong><span>India and Gulf<br>hotel pathways</span></div>
+                <div class="gulf-stat"><strong>Arabic</strong><span>The skill most<br>graduates don't have</span></div>
+              </div>
+            </div>
+            <ul class="gulf-perks">
+              <li>Career pathways in UAE, Qatar, Kuwait, Bahrain, and Saudi Arabia</li>
+              <li>Accommodation, meals, and transport may be included in hotel packages</li>
+              <li>Annual return flight to India in most hotel contracts</li>
+              <li>Saudi Arabia's Vision 2030 creating tens of thousands of hospitality roles</li>
+              <li>Arabic training at Hospera is a direct competitive advantage in Gulf hiring</li>
+              <li>Indian hospitality professionals are highly regarded in Gulf hotel groups</li>
+              <li>Hospera's UK-standard training aligns with international employer expectations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── PLACEMENT SUPPORT ── -->
+    <section class="section section-light section-anchor" id="placement-support">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Placement Support</span>
+          <h2 class="section-title">Exactly what Hospera does to <span class="highlight">get you hired</span></h2>
+          <p class="section-intro">Placement support at Hospera is not a vague promise. It is a structured, six-step process built into the final month — so by the time you graduate, your job search is already in motion.</p>
+        </div>
+        <div class="support-grid" data-reveal>
+          <div class="support-card">
+            <div class="support-num">01</div>
+            <h3 class="support-title">CV &amp; LinkedIn Profile</h3>
+            <p class="support-copy">Your CV is written and formatted specifically for luxury hotel recruitment. Your LinkedIn is built to attract hotel HR teams with the right headline, about section, and skills that surface in recruiter searches.</p>
+          </div>
+          <div class="support-card">
+            <div class="support-num">02</div>
+            <h3 class="support-title">Cover Letter Coaching</h3>
+            <p class="support-copy">You learn to write a compelling, personalised cover letter for each hotel brand — with the tone, structure, and language that premium hotel recruiters actually respond to.</p>
+          </div>
+          <div class="support-card">
+            <div class="support-num">03</div>
+            <h3 class="support-title">Mock Interview Round 1</h3>
+            <p class="support-copy">A formal HR-style panel interview, video recorded. You receive written feedback on communication, grooming, confidence, and clarity — and you improve before Round 2.</p>
+          </div>
+          <div class="support-card">
+            <div class="support-num">04</div>
+            <h3 class="support-title">Mock Interview Round 2</h3>
+            <p class="support-copy">A competency-based panel interview with Opera knowledge questions, situational scenarios, and an Arabic greeting to the panel. The toughest preparation before the real hotel interview.</p>
+          </div>
+          <div class="support-card">
+            <div class="support-num">05</div>
+            <h3 class="support-title">Hotel Referral Letters</h3>
+            <p class="support-copy">Every graduate receives a personal reference letter from the founding directors — London hotel professionals with MSc qualifications. These carry genuine weight with hotel HR teams in India and the Gulf.</p>
+          </div>
+          <div class="support-card">
+            <div class="support-num">06</div>
+            <h3 class="support-title">Direct HR Introductions</h3>
+            <p class="support-copy">Where possible, Hospera introduces graduates directly to hotel HR contacts. You are not applying cold — you arrive with a warm introduction from people who have worked inside these environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── ADMISSIONS ── -->
+    <section class="section section-dark section-anchor" id="admissions">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Admissions</span>
+          <h2 class="section-title">How to secure <span class="highlight">your place</span></h2>
+          <p class="section-intro">Batches are kept small — maximum 25 students — to ensure every student receives genuine attention. Once a batch is full, the next intake opens. Apply early.</p>
+        </div>
+
+        <div class="feature-grid two" style="margin-bottom: 40px;" data-reveal>
+          <article class="table-card">
+            <h3>Program Details</h3>
+            <div class="info-table">
+              <div class="info-row"><span class="info-label">Program Name</span><span class="info-value">Advanced Diploma in Luxury Hospitality Operations</span></div>
+              <div class="info-row"><span class="info-label">Duration</span><span class="info-value">6 Months · 96 Sessions · 192 Hours</span></div>
+              <div class="info-row"><span class="info-label">Location</span><span class="info-value">Hyderabad, India</span></div>
+              <div class="info-row"><span class="info-label">Batch Size</span><span class="info-value">Maximum 25 Students</span></div>
+              <div class="info-row"><span class="info-label">Certification</span><span class="info-value">Professional Diploma in Hotel Operations</span></div>
+              <div class="info-row"><span class="info-label">Investment</span><span class="info-value accent-value">&#8377;68,000</span></div>
+            </div>
+          </article>
+          <article class="table-card">
+            <h3>What's Included</h3>
+            <div class="info-table">
+              <div class="info-row"><span class="info-label">Opera PMS Training</span><span class="info-value">16 Sessions + Graded Test</span></div>
+              <div class="info-row"><span class="info-label">Arabic Language</span><span class="info-value">12 Sessions · Foundation to Advanced</span></div>
+              <div class="info-row"><span class="info-label">Live Front Desk Tests</span><span class="info-value">2 Graded Assessments</span></div>
+              <div class="info-row"><span class="info-label">Mock Interviews</span><span class="info-value">2 Full Rounds on Video</span></div>
+              <div class="info-row"><span class="info-label">Placement Support</span><span class="info-value">CV · LinkedIn · Referrals · HR Intros</span></div>
+              <div class="info-row"><span class="info-label">Status</span><span class="info-value">Open — Limited Seats Available</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="margin-bottom: 16px;">
+          <span class="section-kicker" style="margin-bottom: 16px; display:inline-flex;">4-Step Enrollment Process</span>
+        </div>
+        <div class="enroll-flow" data-reveal>
+          <div class="enroll-step">
+            <div class="enroll-step-num">1</div>
+            <div class="enroll-step-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+            <h3 class="enroll-step-title">Submit Application</h3>
+            <p class="enroll-step-copy">Fill out the online form with your personal, academic, and contact details. Takes less than 5 minutes.</p>
+          </div>
+          <div class="enroll-step">
+            <div class="enroll-step-num">2</div>
+            <div class="enroll-step-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+            <h3 class="enroll-step-title">Document Check</h3>
+            <p class="enroll-step-copy">Share your basic educational records and ID. The admissions team reviews your profile within 48 hours.</p>
+          </div>
+          <div class="enroll-step">
+            <div class="enroll-step-num">3</div>
+            <div class="enroll-step-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+            <h3 class="enroll-step-title">Brief Interaction</h3>
+            <p class="enroll-step-copy">A short conversation with the team about your goals and aspirations. Not an exam — a genuine conversation.</p>
+          </div>
+          <div class="enroll-step">
+            <div class="enroll-step-num">4</div>
+            <h3 class="enroll-step-title">Confirm Your Seat</h3>
+            <p class="enroll-step-copy">Receive your offer and complete enrollment formalities to secure your place in the upcoming batch.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top: 36px; justify-content: center;" data-reveal>
+          <a class="btn btn-gold" href="apply.html" style="padding: 0 32px; min-height: 52px;">Apply Now <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-outline" href="programs.html" style="padding: 0 28px; min-height: 52px;">View Full Program</a>
+          <a class="btn btn-outline" href="contact.html" style="padding: 0 28px; min-height: 52px;">Ask a Question</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── CONTACT ── -->
+    <section class="section section-light section-anchor" id="contact" hidden>
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Contact Hospera</span>
+          <h2 class="section-title">Questions? We're here to <span class="highlight">help you decide</span></h2>
+          <p class="section-intro">Whether you want to understand the program better, ask about Gulf placements, or just need clarity before applying — reach out and the team will respond within 24 hours.</p>
+        </div>
+
+        <div class="contact-band" data-reveal>
+          <div class="contact-band-card">
+            <div class="contact-band-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div>
+              <div class="contact-band-label">Call Us</div>
+              <div class="contact-band-value">+91 8523072664<br />+91 9032014622</div>
+              <div class="contact-band-note">Admissions, program questions, and Gulf pathway guidance.</div>
+            </div>
+          </div>
+          <div class="contact-band-card">
+            <div class="contact-band-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <div class="contact-band-label">Email Us</div>
+              <div class="contact-band-value">admissions@hosperainstitute.com</div>
+              <div class="contact-band-note">For brochure requests, document queries, and formal communication.</div>
+            </div>
+          </div>
+          <div class="contact-band-card">
+            <div class="contact-band-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <div class="contact-band-label">Location</div>
+              <div class="contact-band-value">Hyderabad, India</div>
+              <div class="contact-band-note">Training in Hyderabad with a clear pathway to India and Gulf placements.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-grid" data-reveal>
+          <div>
+            <div style="padding: 36px; border-radius: 22px; border: 1px solid rgba(31,24,18,0.07); background: #fff; box-shadow: 0 4px 18px rgba(17,21,28,0.05);">
+              <span class="card-tag">Common Questions</span>
+              <h3 style="font-family:'Cormorant Garamond',serif; font-size: 1.9rem; color: var(--navy-900); margin: 0 0 24px; letter-spacing:-0.02em; line-height:1.05;">What students ask before they apply</h3>
+              <div style="display:grid; gap:18px;">
+                <div style="padding-bottom: 18px; border-bottom: 1px solid rgba(31,24,18,0.07);">
+                  <div style="font-weight:700; color: var(--navy-900); font-size:0.92rem; margin-bottom:6px;">Do I need a hospitality background to join?</div>
+                  <div style="font-size:0.86rem; color: var(--text-soft); line-height:1.65;">No. The program starts from the very beginning. Students with no prior experience are welcome — Month 1 is specifically designed to build your foundation from scratch.</div>
+                </div>
+                <div style="padding-bottom: 18px; border-bottom: 1px solid rgba(31,24,18,0.07);">
+                  <div style="font-weight:700; color: var(--navy-900); font-size:0.92rem; margin-bottom:6px;">What if I don't know any Arabic?</div>
+                  <div style="font-size:0.86rem; color: var(--text-soft); line-height:1.65;">Arabic is taught completely from scratch as part of the program. No prior knowledge is needed. By Month 5 you will be able to conduct a full hotel interaction in Arabic.</div>
+                </div>
+                <div style="padding-bottom: 18px; border-bottom: 1px solid rgba(31,24,18,0.07);">
+                  <div style="font-weight:700; color: var(--navy-900); font-size:0.92rem; margin-bottom:6px;">Is placement guaranteed?</div>
+                  <div style="font-size:0.86rem; color: var(--text-soft); line-height:1.65;">Hospera provides 100% placement assistance — structured CV support, referrals, and hotel introductions. Outcomes depend on student performance, but every graduate receives active support until placed.</div>
+                </div>
+                <div>
+                  <div style="font-weight:700; color: var(--navy-900); font-size:0.92rem; margin-bottom:6px;">Can I apply for Gulf roles from Hyderabad?</div>
+                  <div style="font-size:0.86rem; color: var(--text-soft); line-height:1.65;">Yes. Hospera includes Gulf-specific preparation throughout the program — Arabic, UK service standards, Opera PMS — and provides guidance on Gulf application processes after graduation.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-shell" data-reveal>
+            <h2 class="form-title">Request a Call Back</h2>
+            <form class="form-grid">
+              <div class="field">
+                <label for="c-name">Full Name</label>
+                <input id="c-name" type="text" placeholder="Your full name" />
+              </div>
+              <div class="field">
+                <label for="c-phone">Phone / WhatsApp</label>
+                <input id="c-phone" type="tel" placeholder="Your mobile number" />
+              </div>
+              <div class="field">
+                <label for="c-email">Email Address</label>
+                <input id="c-email" type="email" placeholder="Your email address" />
+              </div>
+              <div class="field">
+                <label for="c-topic">What do you want to know?</label>
+                <select id="c-topic">
+                  <option>Program details &amp; curriculum</option>
+                  <option>Gulf placement pathways</option>
+                  <option>Admissions &amp; enrollment process</option>
+                  <option>Fees &amp; payment options</option>
+                  <option>Arabic language training</option>
+                  <option>Opera PMS training</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="c-msg">Your Message</label>
+                <textarea id="c-msg" placeholder="Tell us about yourself and what you want to achieve"></textarea>
+              </div>
+            </form>
+            <div class="form-actions">
+              <button class="btn btn-gold" type="button">Submit Enquiry</button>
+              <span class="form-note">We respond within 24 hours.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">Need Help Deciding?</span>
+          <h2 class="section-title">Use the dedicated <span class="highlight">contact page</span> for enquiries</h2>
+          <p class="section-intro">All phone, email, and enquiry details now live under Contact so students always land on one clear place for support.</p>
+        </div>
+        <div class="hero-actions" data-reveal style="justify-content:center;">
+          <a class="btn btn-gold" href="contact.html">Open Contact Page</a>
+          <a class="btn btn-outline-dark" href="apply.html">Apply Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Hospera Institute</h3>
+        <p class="footer-copy">UK-founded Institute of Hospitality in Hyderabad, India. Training students for five-star hotel careers in India and the Gulf.</p>
+        <p class="footer-small">&copy; <span id="currentYear"></span> Hospera Institute of Hospitality. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+918523072664">+91 8523072664</a>
+        <a href="tel:+919032014622">+91 9032014622</a>
+        <a href="mailto:info@hosperainstitute.com">info@hosperainstitute.com</a>
+        <a href="mailto:admissions@hosperainstitute.com">admissions@hosperainstitute.com</a>
+        <a href="contact.html">Contact &amp; Enquiry</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

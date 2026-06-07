@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Hospera Institute | Origin, Founders, Mission and Hospitality Standards</title>
+  <meta
+    name="description"
+    content="Learn about Hospera Institute of Hospitality, its origin story, founders, mission, UK-inspired training approach, Hyderabad location advantage, and practical student-first hospitality environment."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  .about-page .page-hero {
+    min-height: 50svh;
+    padding: calc(var(--header-height) + 18px) 0 34px;
+  }
+
+  .about-page .section {
+    padding: clamp(30px, 3.4vw, 44px) 0;
+  }
+
+  .about-page .section-header {
+    margin-bottom: 18px;
+  }
+
+  .about-page .section-title {
+    font-size: clamp(1.78rem, 2.7vw, 2.55rem);
+    margin-bottom: 10px;
+  }
+
+  .about-page .section-intro,
+  .about-page .serif-copy,
+  .about-page .card-copy,
+  .about-page .bullet-list {
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
+  .about-page .split-grid {
+    gap: clamp(18px, 2.4vw, 28px);
+  }
+
+  .about-page .content-stack > * + * {
+    margin-top: 10px;
+  }
+
+  .about-page .media-frame,
+  .about-page .about-story-media,
+  .about-page .about-compact-media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    max-height: 260px;
+  }
+
+  .about-page .feature-grid,
+  .about-page .founders-grid {
+    gap: 14px;
+  }
+
+  .about-page .feature-card,
+  .about-page .table-card {
+    padding: 18px;
+  }
+
+  .about-page .about-philosophy-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .about-page .about-difference-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .about-page .about-context-stack,
+  .about-page .about-environment-grid {
+    gap: 12px;
+  }
+
+  .about-page #context .about-context-stack {
+    max-width: 360px;
+    justify-self: end;
+    gap: 10px;
+  }
+
+  .about-page #context .about-context-card {
+    padding: 14px 16px;
+    border-radius: 18px;
+  }
+
+  .about-page #context .about-context-card h3 {
+    margin-bottom: 10px;
+    font-size: clamp(1.18rem, 1.35vw, 1.38rem);
+    line-height: 1.08;
+  }
+
+  .about-page #context .about-inline-list {
+    gap: 6px;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .about-page .about-environment-grid-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+    align-items: stretch;
+  }
+
+  .about-page #environment .about-compact-media {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    max-height: none;
+    aspect-ratio: 3 / 4;
+    align-self: stretch;
+  }
+
+  .about-page #environment .about-compact-media img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about-page .card-title {
+    font-size: clamp(1.22rem, 1.5vw, 1.55rem);
+  }
+
+  .about-page .spacer-md {
+    height: 8px;
+  }
+
+  .about-page .page-menu {
+    margin-top: 20px;
+  }
+
+  .about-page .hero-actions {
+    margin-top: 18px;
+  }
+
+  .founders-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 28px;
+   margin-top: 28px;
+ }
+ .f-card {
+   display: grid;
+   grid-template-columns: 176px 1fr;
+   overflow: hidden;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   background: rgba(255, 255, 255, 0.03);
+   transition: border-color 0.3s;
+ }
+ .f-card:hover {
+   border-color: rgba(196, 150, 58, 0.45);
+ }
+ .f-photo {
+   position: relative;
+   overflow: hidden;
+ }
+ .f-photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: top center;
+   display: block;
+   filter: grayscale(10%);
+   transition: filter 0.4s ease, transform 0.5s ease;
+ }
+ .f-card:hover .f-photo img {
+   filter: grayscale(0%);
+   transform: scale(1.04);
+ }
+ .f-body {
+   padding: 24px 22px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+.f-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.0;
+  color: #fff;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.f-role-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c4963a;
+  margin-bottom: 14px;
+}
+.f-hotel {
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+}
+.f-hotel-name {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.f-hotel-title {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 300;
+}
+.f-bio {
+  font-size: 0.82rem;
+  line-height: 1.58;
+  color: rgba(255, 255, 255, 0.52);
+  font-weight: 300;
+}
+.f-msc {
+  margin-top: 12px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c4963a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.f-msc::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: #c4963a;
+  flex-shrink: 0;
+}
+.founder-quote {
+  margin-top: 28px;
+  padding: 28px 34px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #c4963a;
+}
+.founder-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 1.6vw, 1.55rem);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.42;
+  color: #fff;
+  margin-bottom: 14px;
+  max-width: 76ch;
+}
+.founder-quote cite {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c4963a;
+  font-style: normal;
+}
+@media (max-width: 1000px) {
+  .about-page .about-philosophy-grid,
+  .about-page .about-difference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .founders-grid { grid-template-columns: 1fr; }
+  .f-card { grid-template-columns: 180px 1fr; }
+
+  .about-page .about-environment-grid-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page #context .about-context-stack {
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .about-page #environment .about-compact-media {
+    min-height: 420px;
+    aspect-ratio: 4 / 5;
+  }
+}
+@media (max-width: 640px) {
+  .about-page .about-philosophy-grid,
+  .about-page .about-difference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page #origin .about-story-media {
+    order: 1;
+  }
+
+  .about-page #origin .content-stack {
+    order: 2;
+  }
+
+  .about-page #environment .about-compact-media {
+    min-height: 360px;
+  }
+
+  .f-card { grid-template-columns: 1fr; }
+  .f-photo { aspect-ratio: 3/2; }
+  .founder-quote { padding: 28px 22px; }
+}
+</style>
+</head>
+<body class="about-page">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Hospera Institute home">
+        <span class="brand-mark"><img src="assets/hospera_logo_transparent.png" alt="Hospera logo" /></span>
+        <span class="brand-copy">
+          <span class="brand-title">Hospera</span>
+          <span class="brand-subtitle">Institute of Hospitality</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="programs.html">Programs</a>
+          <a href="careers.html">Careers &amp; Admissions</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-outline" href="careers.html#admissions">Admissions</a>
+          <a class="btn btn-gold" href="apply.html">Apply Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-shell">
+    <section class="page-hero has-video" style="background-image: url('assets/hospitality-scene.jpg');">
+      <video class="hero-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" poster="assets/hospitality-scene.jpg" aria-hidden="true">
+        <source src="assets/videos/hero-about-hotel.mp4" type="video/mp4" />
+      </video>
+      <div class="container" data-reveal>
+        <span class="section-kicker">About Hospera</span>
+        <h1 class="page-hero-title">The story, standards, and people behind <span class="highlight">Hospera Institute</span></h1>
+        <p class="page-hero-copy">
+          Founded by London hotel professionals. Rooted in Hyderabad. Built to give ambitious students a faster, smarter route into international hospitality careers.
+        </p>
+        <div class="page-menu">
+          <a href="#origin">Origin Story</a>
+          <a href="#founders">Founders</a>
+          <a href="#mission">Mission</a>
+          <a href="#difference">Difference</a>
+          <a href="#environment">Environment</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light section-anchor" id="origin">
+      <div class="container">
+        <div class="split-grid about-story-grid">
+          <div class="content-stack" data-reveal>
+            <span class="section-kicker">The Origin Story</span>
+            <h2 class="section-title">Hospera was not created <span class="highlight">in a classroom</span></h2>
+            <p class="section-intro">
+              It was built from real experience inside the hospitality industry. After working in high pressure hotel environments in London, we saw the same pattern repeating, talented individuals finishing years of traditional education, yet lacking the practical skills, confidence, and industry readiness that luxury hotels actually demand.
+            </p>
+            <p class="serif-copy">
+              We saw students investing years of time and lakhs on degrees, starting at low salaries and struggling to progress. Not because they lacked potential, but because they had followed the wrong system.
+            </p>
+            <p class="serif-copy">
+              We asked one simple question: Why should it take years to become job ready in hospitality? That question became the foundation of Hospera.
+            </p>
+          </div>
+          <div class="media-frame about-story-media" data-reveal>
+            <img src="assets/hospitality-scene.jpg" alt="Grand hotel exterior representing Hospera's international hospitality roots" />
+            <div class="about-media-note">
+              <h3>Why Hospera was created</h3>
+              <ul class="about-inline-list">
+                <li>Real industry training</li>
+                <li>Global service standards</li>
+                <li>Exposure to international hotel systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer-md"></div>
+      </div>
+    </section>
+
+    <section class="section section-dark section-anchor" id="founders">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-kicker">The Founders</span>
+      <h2 class="section-title">Led by professionals who have <span class="highlight">done the work</span></h2>
+      <p class="section-intro">
+        Both founders hold London hotel experience and postgraduate qualifications in international hospitality — which is why the Hospera program is built around what hotels actually need, not what a textbook recommends.
+      </p>
+    </div>
+
+    <div class="founders-grid">
+      <article class="f-card" data-reveal>
+        <div class="f-photo">
+          <img src="assets/Hussain.png" alt="Hussain Ahmed — Founder & Director" />
+        </div>
+        <div class="f-body">
+          <h3 class="f-name">Hussain Ahmed</h3>
+          <div class="f-role-tag">Founder &amp; Director</div>
+          <div class="f-hotel">
+            <div class="f-hotel-name">The Franklin Hotel, London — Mayfair</div>
+            <div class="f-hotel-title">Night Manager</div>
+          </div>
+          <p class="f-bio">
+            With hands-on experience in high-end hotel operations in London's Mayfair district, Hussain brings deep industry insight into what global hotels truly expect from professionals. His experience spans real-time operations, guest experience, and team leadership at the highest standards.
+          </p>
+          <div class="f-msc">MSc International Hospitality &amp; Tourism Management</div>
+        </div>
+      </article>
+
+      <article class="f-card" data-reveal>
+        <div class="f-photo">
+          <img src="assets/Raj.png" alt="Raj Singh — Founder & Director" />
+        </div>
+        <div class="f-body">
+          <h3 class="f-name">Raj Singh</h3>
+          <div class="f-role-tag">Founder &amp; Director</div>
+          <div class="f-hotel">
+            <div class="f-hotel-name">The Tower Hotel, London</div>
+            <div class="f-hotel-title">Front Office Manager</div>
+          </div>
+          <p class="f-bio">
+            Raj brings strong operational leadership and front office expertise from one of London's most recognised hospitality environments. With a sharp focus on service excellence, guest satisfaction, and team performance, he understands what it takes to succeed in competitive international hotel roles.
+          </p>
+          <div class="f-msc">MSc International Hospitality &amp; Tourism Management</div>
+        </div>
+      </article>
+    </div>
+
+    <blockquote class="founder-quote" data-reveal>
+      <p>"Working in London hotels showed us exactly what separates candidates who get hired from those who don't. It is never just qualifications — it is practical readiness, system confidence, and the ability to walk into a five-star environment and perform from day one. Hospera exists to close that gap."</p>
+      <cite>Hussain Ahmed &amp; Raj Singh — Co-Founders, Hospera Institute</cite>
+    </blockquote>
+  </div>
+</section>
+
+    <section class="section section-light section-anchor" id="mission">
+      <div class="container">
+        <div class="split-grid reverse about-mission-grid">
+          <div class="media-frame about-compact-media" data-reveal>
+            <img src="assets/learning-space.jpg" alt="Modern learning space for structured hospitality teaching" />
+          </div>
+          <div class="content-stack" data-reveal>
+            <span class="section-kicker">Mission & Teaching Philosophy</span>
+            <h2 class="section-title">Hospitality should be learned through <span class="highlight">practice, standards, and confidence</span></h2>
+            <p class="section-intro">
+              Our mission is to make international hotel careers accessible to students from India through practical, industry-driven, and globally aligned training.
+            </p>
+            <p class="serif-copy">
+              We believe hospitality cannot be learned only from books. Students need situations, feedback, discipline, presentation standards, and role clarity if they are going to succeed in real hotel environments.
+            </p>
+          </div>
+        </div>
+
+        <div class="spacer-md"></div>
+
+        <div class="feature-grid two about-philosophy-grid">
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">01</span>
+            <h3 class="card-title">Learn by Doing</h3>
+            <p class="card-copy">Students train in real scenarios, guided exercises, and role-based practice instead of learning through theory alone.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">02</span>
+            <h3 class="card-title">Global Standards First</h3>
+            <p class="card-copy">The training is aligned with how international hotels actually operate, communicate, and deliver guest experience.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">03</span>
+            <h3 class="card-title">Confidence is a Skill</h3>
+            <p class="card-copy">Communication, grooming, and presentation are built into daily training so students can perform with professionalism.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">04</span>
+            <h3 class="card-title">Careers, Not Courses</h3>
+            <p class="card-copy">Every program decision is made with job outcomes in mind, so students graduate with direction, not just attendance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark section-anchor" id="context">
+      <div class="container">
+        <div class="split-grid about-context-grid">
+          <div class="content-stack" data-reveal>
+            <span class="section-kicker">Why Hyderabad & The UK Connection</span>
+            <h2 class="section-title">Local opportunity, global standards, and a <span class="highlight">clear international lens</span></h2>
+            <p class="section-intro">
+              Hyderabad is one of India's fastest-growing hospitality and service hubs, with international hotel chains, growing tourism and business travel, and strong infrastructure and accessibility.
+            </p>
+            <p class="serif-copy">
+              Hospera uses that local momentum while applying a UK-inspired training approach focused on structured service standards, professional communication, international hotel operations workflows, and guest experience excellence.
+            </p>
+            <p class="serif-copy">
+              The curriculum is designed to reflect what global hotels expect, especially across the UK, Europe, and Gulf countries.
+            </p>
+          </div>
+          <div class="about-context-stack" data-reveal>
+            <article class="table-card about-context-card">
+              <h3>Why Hyderabad works</h3>
+              <ul class="about-inline-list">
+                <li>International hotel chains</li>
+                <li>Growing tourism and business travel</li>
+                <li>Strong infrastructure and accessibility</li>
+                <li>Practical local opportunity for students</li>
+              </ul>
+            </article>
+            <article class="table-card about-context-card">
+              <h3>What the UK influence means</h3>
+              <ul class="about-inline-list">
+                <li>Structured hospitality service standards</li>
+                <li>Professional communication and etiquette</li>
+                <li>International hotel operations workflows</li>
+                <li>Guest experience excellence</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light section-anchor" id="difference">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-kicker">What Makes Hospera Different</span>
+          <h2 class="section-title">This is not just training. It is <span class="highlight">career preparation with direction</span></h2>
+          <p class="section-intro">
+            Most institutes in Hyderabad focus on basic theory. Hospera focuses on real employability by combining systems training, language exposure, grooming, and job-market alignment.
+          </p>
+        </div>
+
+        <div class="feature-grid three about-difference-grid">
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Software Training</span>
+            <h3 class="card-title">Opera PMS Training</h3>
+            <p class="card-copy">Students learn actual hotel management software used worldwide for reservations, guest profiles, billing, and front office operations.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Language Edge</span>
+            <h3 class="card-title">Arabic Language Basics</h3>
+            <p class="card-copy">Students build useful hospitality communication for Gulf-facing roles through essential guest interaction language and workplace phrases.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Market Alignment</span>
+            <h3 class="card-title">Gulf Placement Focus</h3>
+            <p class="card-copy">Training is aligned with real hospitality job markets and international mobility rather than broad, generic career promises.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Training Method</span>
+            <h3 class="card-title">Practical-First Approach</h3>
+            <p class="card-copy">Students spend less time in passive classroom learning and more time in structured simulation, role play, and scenario work.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="card-tag">Professional Readiness</span>
+            <h3 class="card-title">Personality & Grooming Training</h3>
+            <p class="card-copy">Students are prepared to present themselves professionally, communicate with confidence, and carry the discipline expected in hospitality.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contrast section-anchor" id="environment">
+      <div class="container">
+        <div class="split-grid reverse about-environment-grid-shell">
+          <div class="media-frame about-compact-media" data-reveal>
+            <img src="assets/training-environment.png" alt="Hospera training environment with classroom, service, and culinary practice areas" />
+          </div>
+          <div class="content-stack" data-reveal>
+            <span class="section-kicker">The Training Environment</span>
+            <h2 class="section-title">Learning that feels like a <span class="highlight">real hospitality workplace</span></h2>
+            <p class="section-intro">
+              At Hospera, students do not just sit in classrooms. They train in structured environments that simulate real hotel situations and daily service expectations.
+            </p>
+            <div class="feature-grid two about-environment-grid">
+              <article class="feature-card">
+                <span class="card-tag">Mock Front Office Desk</span>
+                <p class="card-copy">Practice check-ins, guest interaction, reservations, and front office professionalism.</p>
+              </article>
+              <article class="feature-card">
+                <span class="card-tag">Service Training Area</span>
+                <p class="card-copy">Learn restaurant service, table setup, presentation, and guest handling.</p>
+              </article>
+              <article class="feature-card">
+                <span class="card-tag">Classroom Sessions</span>
+                <p class="card-copy">Build theory, communication ability, and career understanding in a guided format.</p>
+              </article>
+              <article class="feature-card">
+                <span class="card-tag">Practical Labs</span>
+                <p class="card-copy">Hands-on exercises simulate live hotel situations so skills become natural and repeatable.</p>
+              </article>
+            </div>
+            <ul class="bullet-list">
+              <li>A typical day includes skill training, communication practice, grooming sessions, and real-world simulations</li>
+              <li>Students graduate with confidence, professionalism, and job readiness that can be applied immediately</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="programs.html">View Program Details</a>
+              <a class="btn btn-outline-dark" href="careers.html#admissions">View Admissions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="footer-title">Hospera Institute</h3>
+        <p class="footer-copy">UK-founded Institute of Hospitality in Hyderabad, India.</p>
+        <p class="footer-small">&copy; <span id="currentYear"></span> Hospera Institute of Hospitality. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="programs.html">Programs</a>
+        <a href="careers.html">Careers &amp; Admissions</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+918523072664">+91 8523072664</a>
+        <a href="tel:+919032014622">+91 9032014622</a>
+        <a href="mailto:info@hosperainstitute.com">info@hosperainstitute.com</a>
+        <a href="mailto:admissions@hosperainstitute.com">admissions@hosperainstitute.com</a>
+        <a href="contact.html">Contact & Enquiry</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
