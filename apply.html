@@ -10,7 +10,7 @@
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=500;600;700&family=Manrope:wght=400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -72,26 +72,26 @@
 
         <div class="form-shell dark" data-reveal>
           <h2 class="form-title">Application Form</h2>
-          <form class="form-grid">
+          <form class="form-grid" id="hosperaApplyForm">
             <div class="field">
               <label for="apply-name">Full Name</label>
-              <input id="apply-name" type="text" placeholder="Enter your full name" />
+              <input id="apply-name" name="fullName" type="text" placeholder="Enter your full name" required />
             </div>
             <div class="field">
               <label for="apply-phone">Phone Number</label>
-              <input id="apply-phone" type="tel" placeholder="Enter your phone number" />
+              <input id="apply-phone" name="phone" type="tel" placeholder="Enter your phone number" required />
             </div>
             <div class="field">
               <label for="apply-email">Email Address</label>
-              <input id="apply-email" type="email" placeholder="Enter your email address" />
+              <input id="apply-email" name="email" type="email" placeholder="Enter your email address" required />
             </div>
             <div class="field">
               <label for="apply-city">Current City</label>
-              <input id="apply-city" type="text" placeholder="Enter your city" />
+              <input id="apply-city" name="city" type="text" placeholder="Enter your city" required />
             </div>
             <div class="field">
               <label for="apply-education">Highest Qualification</label>
-              <select id="apply-education">
+              <select id="apply-education" name="qualification">
                 <option>10th / SSC</option>
                 <option>12th / Intermediate</option>
                 <option>Diploma</option>
@@ -100,7 +100,7 @@
             </div>
             <div class="field">
               <label for="apply-program">Interested Program</label>
-              <select id="apply-program">
+              <select id="apply-program" name="program">
                 <option>6-Month Hospitality Program</option>
                 <option>Front Office + Opera PMS Focus</option>
                 <option>Arabic + Gulf Career Focus</option>
@@ -108,13 +108,14 @@
             </div>
             <div class="field full">
               <label for="apply-message">Career Goal</label>
-              <textarea id="apply-message" placeholder="Tell us what kind of hospitality career you want to build"></textarea>
+              <textarea id="apply-message" name="careerGoal" placeholder="Tell us what kind of hospitality career you want to build" required></textarea>
+            </div>
+            
+            <div class="form-actions" style="grid-column: span 2; margin-top: 1.5rem;">
+              <button class="btn btn-gold" type="submit" id="submitBtn">Submit Application</button>
+              <span class="form-note" id="formStatusMsg">Your data will be securely stored in our admissions database.</span>
             </div>
           </form>
-          <div class="form-actions">
-            <button class="btn btn-gold" type="button">Submit Application</button>
-            <span class="form-note">This is a front-end application layout. Connect it to your form backend before publishing.</span>
-          </div>
         </div>
       </div>
     </section>
@@ -142,5 +143,43 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+    document.getElementById('hosperaApplyForm').addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      
+      const form = e.target;
+      const submitBtn = document.getElementById('submitBtn');
+      const statusMsg = document.getElementById('formStatusMsg');
+      
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Submitting...';
+      
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz9u5HoQJLcl8g6T6vUCVBOecQZ4JeK2wuwl6fFqMpZ_4dfyJ92iObesa3Lg-H5vM0/exec';
+      
+      fetch(scriptURL, { 
+        method: 'POST', 
+        body: new FormData(form)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if(data.result === 'success') {
+          statusMsg.style.color = '#d4af37'; 
+          statusMsg.innerText = 'Application submitted successfully! Our team will contact you soon.';
+          submitBtn.innerText = 'Submitted';
+          form.reset();
+        } else {
+          throw new Error('Backend rejection');
+        }
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        statusMsg.style.color = '#ff6b6b';
+        statusMsg.innerText = 'Something went wrong. Please try again.';
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Submit Application';
+      });
+    });
+  </script>
 </body>
 </html>
