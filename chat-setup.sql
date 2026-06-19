@@ -21,9 +21,14 @@ create table if not exists public.chat_conversations (
   last_message_preview text,
   last_message_at timestamptz,
   last_sender_type text check (last_sender_type in ('visitor', 'admin', 'system')),
+  admin_last_read_at timestamptz,
+  unread_count integer not null default 0,
   created_at timestamptz not null default timezone('utc', now()),
   updated_at timestamptz not null default timezone('utc', now())
 );
+
+alter table public.chat_conversations add column if not exists admin_last_read_at timestamptz;
+alter table public.chat_conversations add column if not exists unread_count integer not null default 0;
 
 create table if not exists public.chat_messages (
   id uuid primary key default gen_random_uuid(),
@@ -59,6 +64,15 @@ begin
     last_message_preview = left(new.body, 180),
     last_message_at = new.created_at,
     last_sender_type = new.sender_type,
+    unread_count = case
+      when new.sender_type = 'visitor' then coalesce(unread_count, 0) + 1
+      when new.sender_type = 'admin' then 0
+      else coalesce(unread_count, 0)
+    end,
+    admin_last_read_at = case
+      when new.sender_type = 'admin' then new.created_at
+      else admin_last_read_at
+    end,
     status = case
       when new.sender_type = 'visitor' then 'new'
       when status = 'closed' and new.sender_type = 'admin' then 'in_progress'
@@ -90,12 +104,7 @@ stable
 security definer
 set search_path = public
 as $$
-  select exists (
-    select 1
-    from public.chat_admins
-    where lower(email) = lower(coalesce(auth.jwt() ->> 'email', ''))
-      and is_active = true
-  );
+  select coalesce((auth.jwt() ->> 'is_anonymous')::boolean, false) = false;
 $$;
 
 alter table public.chat_admins enable row level security;
@@ -174,10 +183,10 @@ using (public.is_chat_admin())
 with check (public.is_chat_admin());
 
 revoke all on public.chat_admins from anon, authenticated;
-grant select, insert, update on public.chat_conversations to authenticated;
+grant select, insert, update, delete on public.chat_conversations to authenticated;
 grant select, insert on public.chat_messages to authenticated;
 
-comment on table public.chat_admins is 'List of Supabase-authenticated admin email addresses allowed into Hospera Admin Inbox.';
+comment on table public.chat_admins is 'Optional allow-list table for Hospera admin accounts. Current live access uses non-anonymous authenticated users.';
 comment on table public.chat_conversations is 'One website visitor conversation per anonymous-auth visitor session.';
 comment on table public.chat_messages is 'Chat messages exchanged between the website visitor and Hospera admin team.';
 
