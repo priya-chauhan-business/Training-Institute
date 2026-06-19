@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Hospera Admin Icon</title>
+  <desc id="desc">Gold H monogram on a deep navy square background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#132746" />
+      <stop offset="100%" stop-color="#0b1628" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3dfb6" />
+      <stop offset="100%" stop-color="#d3a95b" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)" />
+  <rect x="64" y="64" width="384" height="384" rx="96" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="4" />
+  <path
+    d="M152 126h58v118h92V126h58v260h-58V294h-92v92h-58Z"
+    fill="url(#gold)"
+  />
+</svg>

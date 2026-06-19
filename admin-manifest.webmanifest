@@ -1,0 +1,17 @@
+{
+  "name": "Hospera Admin Inbox",
+  "short_name": "Hospera Admin",
+  "description": "Private live messaging inbox for the Hospera admissions team.",
+  "start_url": "./admin.html",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#0b1628",
+  "icons": [
+    {
+      "src": "hospera-admin-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
