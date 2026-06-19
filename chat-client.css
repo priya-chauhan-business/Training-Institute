@@ -1,0 +1,360 @@
+.hospera-chat-widget {
+  position: fixed;
+  right: 22px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 1250;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.hospera-chat-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.hospera-chat-launcher,
+.hospera-chat-enquiry,
+.hospera-chat-send,
+.hospera-chat-close,
+.hospera-chat-start {
+  border: 0;
+  font: inherit;
+}
+
+.hospera-chat-launcher,
+.hospera-chat-enquiry {
+  min-width: 186px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 18px 36px rgba(7, 14, 24, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hospera-chat-launcher {
+  color: #fff;
+  background: linear-gradient(135deg, #132746, #0b1628);
+}
+
+.hospera-chat-enquiry {
+  color: #0d1724;
+  background: linear-gradient(135deg, #f3dfb6, #e4c793);
+}
+
+.hospera-chat-launcher:hover,
+.hospera-chat-launcher:focus-visible,
+.hospera-chat-enquiry:hover,
+.hospera-chat-enquiry:focus-visible,
+.hospera-chat-send:hover,
+.hospera-chat-send:focus-visible,
+.hospera-chat-close:hover,
+.hospera-chat-close:focus-visible,
+.hospera-chat-start:hover,
+.hospera-chat-start:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 38px rgba(7, 14, 24, 0.24);
+}
+
+.hospera-chat-launcher:focus-visible,
+.hospera-chat-enquiry:focus-visible,
+.hospera-chat-send:focus-visible,
+.hospera-chat-close:focus-visible,
+.hospera-chat-start:focus-visible,
+.hospera-chat-panel textarea:focus-visible,
+.hospera-chat-panel input:focus-visible {
+  outline: 3px solid rgba(228, 199, 147, 0.45);
+  outline-offset: 3px;
+}
+
+.hospera-chat-panel {
+  width: min(380px, calc(100vw - 32px));
+  display: flex;
+  flex-direction: column;
+  max-height: min(78vh, 720px);
+  border-radius: 24px;
+  border: 1px solid rgba(216, 177, 120, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 244, 236, 0.98)),
+    #fff;
+  box-shadow: 0 24px 60px rgba(7, 14, 24, 0.22);
+  overflow: hidden;
+}
+
+.hospera-chat-panel[hidden] {
+  display: none !important;
+}
+
+.hospera-chat-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 18px 14px;
+  background: linear-gradient(135deg, #0b1628, #122441);
+  color: #fff;
+}
+
+.hospera-chat-head-copy {
+  min-width: 0;
+}
+
+.hospera-chat-eyebrow {
+  margin: 0 0 4px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hospera-chat-title {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.hospera-chat-subtitle {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.hospera-chat-close {
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  flex: 0 0 36px;
+}
+
+.hospera-chat-body {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 18px 18px;
+  overflow: hidden;
+}
+
+.hospera-chat-status {
+  min-height: 24px;
+  margin: 0 0 14px;
+  color: rgba(13, 23, 36, 0.62);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.hospera-chat-prechat,
+.hospera-chat-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.hospera-chat-prechat {
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.hospera-chat-thread {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.hospera-chat-prechat[hidden],
+.hospera-chat-thread[hidden] {
+  display: none !important;
+}
+
+.hospera-chat-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hospera-chat-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hospera-chat-field.full {
+  grid-column: 1 / -1;
+}
+
+.hospera-chat-field label {
+  color: #0d1724;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hospera-chat-field input,
+.hospera-chat-field textarea,
+.hospera-chat-composer textarea {
+  width: 100%;
+  border: 1px solid rgba(13, 23, 36, 0.12);
+  border-radius: 16px;
+  background: #fff;
+  color: #0d1724;
+  font: inherit;
+  line-height: 1.5;
+}
+
+.hospera-chat-field input {
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.hospera-chat-field textarea,
+.hospera-chat-composer textarea {
+  min-height: 112px;
+  max-width: 100%;
+  padding: 14px;
+  resize: vertical;
+}
+
+.hospera-chat-start,
+.hospera-chat-send {
+  align-self: flex-start;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #132746, #0b1628);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.hospera-chat-transcript {
+  flex: 1 1 auto;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 6px 0 0;
+  overflow-y: auto;
+}
+
+.hospera-chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 86%;
+}
+
+.hospera-chat-message.visitor {
+  align-self: flex-end;
+}
+
+.hospera-chat-message.admin,
+.hospera-chat-message.system {
+  align-self: flex-start;
+}
+
+.hospera-chat-bubble {
+  padding: 11px 14px;
+  border-radius: 18px;
+  line-height: 1.5;
+  word-break: break-word;
+  box-shadow: 0 8px 18px rgba(7, 14, 24, 0.08);
+}
+
+.hospera-chat-message.visitor .hospera-chat-bubble {
+  color: #fff;
+  background: linear-gradient(135deg, #17315b, #0b1628);
+  border-bottom-right-radius: 6px;
+}
+
+.hospera-chat-message.admin .hospera-chat-bubble,
+.hospera-chat-message.system .hospera-chat-bubble {
+  color: #0d1724;
+  background: #f5eee1;
+  border: 1px solid rgba(216, 177, 120, 0.16);
+  border-bottom-left-radius: 6px;
+}
+
+.hospera-chat-meta {
+  color: rgba(13, 23, 36, 0.52);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.hospera-chat-composer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(13, 23, 36, 0.08);
+  flex-shrink: 0;
+}
+
+.hospera-chat-composer textarea {
+  min-height: 96px;
+  max-height: 160px;
+}
+
+.hospera-chat-summary {
+  margin: 0 0 4px;
+  color: rgba(13, 23, 36, 0.58);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .hospera-chat-widget {
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    left: 14px;
+    align-items: stretch;
+  }
+
+  .hospera-chat-actions {
+    align-items: stretch;
+  }
+
+  .hospera-chat-launcher,
+  .hospera-chat-enquiry {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hospera-chat-panel {
+    width: 100%;
+    max-height: min(70vh, 640px);
+  }
+
+  .hospera-chat-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .hospera-chat-body {
+    padding: 14px;
+  }
+
+  .hospera-chat-composer textarea,
+  .hospera-chat-field textarea {
+    min-height: 92px;
+  }
+}
