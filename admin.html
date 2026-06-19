@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospera Admin Inbox</title>
+  <meta name="description" content="Private Hospera live chat admin inbox for real-time website messaging." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0b1628" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Hospera Admin" />
+  <link rel="manifest" href="admin-manifest.webmanifest?v=20260619b" />
+  <link rel="apple-touch-icon" href="assets/Hospera Website Logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css?v=20260619b" />
+</head>
+<body class="chat-admin-page">
+  <div class="admin-app">
+    <header class="admin-topbar">
+      <div class="admin-brand">
+        <span class="admin-brand-mark"><img src="assets/Hospera Website Logo.jpeg" alt="Hospera Admin" /></span>
+        <div>
+          <p class="admin-eyebrow">Private Team App</p>
+          <h1 class="admin-title">Hospera Admin Inbox</h1>
+          <p class="admin-subtitle">Live website messaging for your admissions team. On iPhone, open this page in Safari and use <strong>Add to Home Screen</strong>.</p>
+        </div>
+      </div>
+      <div class="admin-top-actions">
+        <span class="admin-chip" id="adminSessionChip">Signed out</span>
+        <button class="admin-text-button" type="button" id="adminEnableAlerts">Enable Alerts</button>
+        <button class="admin-text-button" type="button" id="adminSignOut">Sign Out</button>
+      </div>
+    </header>
+
+    <section class="admin-notice hidden" id="adminSetupNotice">
+      <h2>Supabase setup is still needed</h2>
+      <p>Fill in your real Supabase project URL and anon key in <code>chat-config.js</code>, then run the SQL from <code>chat-setup.sql</code>. After that this inbox becomes a live messaging app.</p>
+    </section>
+
+    <section class="admin-auth-card" id="adminAuthCard">
+      <h2>Team Sign In</h2>
+      <p>Use a Hospera team account created inside Supabase Authentication. You can sign in with email and password or send yourself a magic link.</p>
+
+      <form class="admin-auth-form" id="adminAuthForm">
+        <div class="admin-field">
+          <label for="adminEmail">Email Address</label>
+          <input class="admin-input" id="adminEmail" type="email" autocomplete="email" placeholder="team@hosperainstitute.com" required />
+        </div>
+
+        <div class="admin-field">
+          <label for="adminPassword">Password</label>
+          <input class="admin-input" id="adminPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+        </div>
+
+        <div class="admin-auth-actions">
+          <button class="admin-button" type="submit">Sign In</button>
+          <button class="admin-text-button" type="button" id="adminMagicLink">Email Me a Magic Link</button>
+        </div>
+
+        <p class="admin-auth-status" id="adminAuthStatus"></p>
+      </form>
+    </section>
+
+    <section class="admin-shell hidden" id="adminShell">
+      <aside class="admin-list-pane">
+        <div class="admin-pane-head">
+          <h2 class="admin-pane-title">Live Conversations</h2>
+          <p class="admin-pane-copy">New visitor messages appear here in real time while this app is open.</p>
+        </div>
+        <div class="admin-conversation-list" id="conversationList"></div>
+      </aside>
+
+      <section class="admin-thread-pane">
+        <div class="admin-empty-state" id="emptyState">
+          <h2>No conversation selected</h2>
+          <p>Choose a visitor chat from the left to start replying live.</p>
+        </div>
+
+        <div class="hidden" id="threadPane">
+          <div class="admin-thread-head">
+            <div class="admin-thread-identity">
+              <h2 id="threadName">Visitor</h2>
+              <p class="admin-thread-meta" id="threadMeta"></p>
+            </div>
+
+            <div class="admin-thread-actions">
+              <select class="admin-status-select" id="threadStatusSelect" aria-label="Conversation status">
+                <option value="new">New</option>
+                <option value="in_progress">In Progress</option>
+                <option value="closed">Closed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="admin-message-list" id="messageList"></div>
+
+          <form class="admin-thread-compose" id="replyForm">
+            <div class="admin-field">
+              <label for="replyMessage">Reply Message</label>
+              <textarea class="admin-textarea" id="replyMessage" placeholder="Type your reply to the visitor" required></textarea>
+            </div>
+            <div class="admin-thread-actions">
+              <button class="admin-button" type="submit">Send Reply</button>
+            </div>
+            <p class="admin-thread-status" id="threadStatus"></p>
+          </form>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="chat-config.js?v=20260619b"></script>
+  <script src="admin.js?v=20260619b"></script>
+</body>
+</html>
